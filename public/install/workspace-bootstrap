@@ -1,0 +1,53 @@
+#!/bin/bash
+# SkillPort Installer — workspace-bootstrap
+# https://skillport.dev
+set -e
+
+SKILL_NAME="workspace-bootstrap"
+REPO="nobuyawat/workspace-bootstrap"
+TMP_DIR=$(mktemp -d)
+
+echo ""
+echo "  SkillPort Installer"
+echo "  Installing: ${SKILL_NAME}"
+echo ""
+
+# Download via git clone (fast, shallow) or fallback to curl+zip
+if command -v git &> /dev/null; then
+  echo "  Downloading via git..."
+  git clone --depth 1 "https://github.com/${REPO}.git" "${TMP_DIR}/repo" 2>/dev/null
+  SRC="${TMP_DIR}/repo"
+else
+  echo "  Downloading via curl..."
+  curl -sL "https://github.com/${REPO}/archive/refs/heads/main.zip" -o "${TMP_DIR}/dl.zip"
+  unzip -q "${TMP_DIR}/dl.zip" -d "${TMP_DIR}"
+  SRC="${TMP_DIR}/${SKILL_NAME}-main"
+fi
+
+# Install skills to ~/.claude/skills/
+echo "  Installing skills..."
+mkdir -p ~/.claude/skills
+if [ -d "${SRC}/.claude/skills" ]; then
+  cp -r "${SRC}/.claude/skills/"* ~/.claude/skills/
+fi
+
+# Install templates
+echo "  Installing templates..."
+if [ -d "${SRC}/templates" ]; then
+  mkdir -p ~/.claude/${SKILL_NAME}
+  cp -r "${SRC}/templates" ~/.claude/${SKILL_NAME}/
+fi
+
+# Cleanup
+rm -rf "${TMP_DIR}"
+
+echo ""
+echo "  Done! ${SKILL_NAME} is installed."
+echo ""
+echo "  Next step — run the setup wizard in Claude Code:"
+echo ""
+echo "    /workspace-bootstrap-setup"
+echo ""
+echo "  The wizard will ask about your services, accounts,"
+echo "  and generate your personal workspace command."
+echo ""
