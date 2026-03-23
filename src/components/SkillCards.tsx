@@ -31,8 +31,8 @@ const skills: SkillCard[] = [
     category: "ワークスペース",
     categoryColor: "text-cyan-400 bg-cyan-400/10 border-cyan-400/20",
     icon: <Monitor size={20} />,
-    rating: 4.9,
-    downloads: "1.2k",
+    rating: 0,
+    downloads: "",
     version: "v2.0.0",
     badge: "第1弾",
     priceBadge: "無料公開中",
@@ -46,8 +46,8 @@ const skills: SkillCard[] = [
     category: "コンテンツ",
     categoryColor: "text-violet-400 bg-violet-400/10 border-violet-400/20",
     icon: <FileText size={20} />,
-    rating: 4.7,
-    downloads: "890",
+    rating: 0,
+    downloads: "",
     version: "v2.0.0",
     priceBadge: "準備中",
     available: false,
@@ -59,8 +59,8 @@ const skills: SkillCard[] = [
     category: "生産性",
     categoryColor: "text-emerald-400 bg-emerald-400/10 border-emerald-400/20",
     icon: <BookOpen size={20} />,
-    rating: 4.8,
-    downloads: "2.1k",
+    rating: 0,
+    downloads: "",
     version: "v1.5.0",
     priceBadge: "準備中",
     available: false,
@@ -165,11 +165,13 @@ export default function SkillCards() {
                 <div className="mt-5 border-t border-surface-border/60 pt-4">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-4">
-                      <StarRating rating={skill.rating} />
-                      <div className="flex items-center gap-1 text-xs text-text-tertiary">
-                        <Download size={11} />
-                        <span>{skill.downloads}</span>
-                      </div>
+                      {skill.rating > 0 && <StarRating rating={skill.rating} />}
+                      {skill.downloads && (
+                        <div className="flex items-center gap-1 text-xs text-text-tertiary">
+                          <Download size={11} />
+                          <span>{skill.downloads}</span>
+                        </div>
+                      )}
                       <span className="text-[11px] text-text-tertiary/60 font-mono">
                         {skill.version}
                       </span>
@@ -185,11 +187,13 @@ export default function SkillCards() {
                 </div>
               ) : (
                 <div className="mt-5 flex items-center gap-4 border-t border-surface-border/60 pt-4">
-                  <StarRating rating={skill.rating} />
-                  <div className="flex items-center gap-1 text-xs text-text-tertiary">
-                    <Download size={11} />
-                    <span>{skill.downloads}</span>
-                  </div>
+                  {skill.rating > 0 && <StarRating rating={skill.rating} />}
+                  {skill.downloads && (
+                    <div className="flex items-center gap-1 text-xs text-text-tertiary">
+                      <Download size={11} />
+                      <span>{skill.downloads}</span>
+                    </div>
+                  )}
                   <span className="text-[11px] text-text-tertiary/60 font-mono">
                     {skill.version}
                   </span>
