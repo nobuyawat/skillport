@@ -2,6 +2,7 @@ import {
   Monitor,
   FileText,
   BookOpen,
+  Code2,
   Star,
   Download,
   ArrowRight,
@@ -14,6 +15,7 @@ interface SkillCard {
   category: string;
   categoryColor: string;
   icon: React.ReactNode;
+  thumbnail?: string;
   rating: number;
   downloads: string;
   version: string;
@@ -31,12 +33,29 @@ const skills: SkillCard[] = [
     category: "ワークスペース",
     categoryColor: "text-cyan-400 bg-cyan-400/10 border-cyan-400/20",
     icon: <Monitor size={20} />,
+    thumbnail: "/images/workspace-bootstrap-thumb.png",
     rating: 0,
     downloads: "",
     version: "v2.0.0",
     badge: "第1弾",
     priceBadge: "無料公開中",
     href: "https://github.com/nobuyawat/workspace-bootstrap",
+    available: true,
+  },
+  {
+    name: "Claude Code Studio",
+    description:
+      "チャットでUIを作り、目の前で動かす。API不要のAI開発環境。空のReady画面からチャット指示でUIが生えていく。",
+    category: "開発環境",
+    categoryColor: "text-green-400 bg-green-400/10 border-green-400/20",
+    icon: <Code2 size={20} />,
+    thumbnail: "/images/claude-code-studio-thumb.png",
+    rating: 0,
+    downloads: "",
+    version: "v1.0.0",
+    badge: "NEW",
+    priceBadge: "$0+",
+    href: "https://kmnworks.gumroad.com/l/kymdrs",
     available: true,
   },
   {
@@ -126,6 +145,13 @@ export default function SkillCards() {
                 </div>
               )}
 
+              {/* Thumbnail */}
+              {skill.thumbnail && (
+                <div className="mb-4 -mx-6 -mt-6 overflow-hidden rounded-t-2xl">
+                  <img src={skill.thumbnail} alt={skill.name} className="w-full h-48 object-contain bg-[#0a0a1a]" />
+                </div>
+              )}
+
               {/* Top row: Icon + Category + Price */}
               <div className="flex items-start justify-between mb-5">
                 <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-surface-2 border border-surface-border text-brand-400 group-hover:text-brand-300 group-hover:border-brand-500/30 transition-colors">
@@ -177,7 +203,7 @@ export default function SkillCards() {
                       </span>
                     </div>
                     <span className="flex items-center gap-1.5 text-xs font-medium text-brand-400 group-hover:text-brand-300 transition-colors">
-                      使ってみる
+                      {skill.href?.includes('gumroad') ? '取得する' : '使ってみる'}
                       <ArrowRight
                         size={13}
                         className="transition-transform group-hover:translate-x-0.5"
