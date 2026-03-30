@@ -61,7 +61,7 @@ const skills: SkillCard[] = [
     badge: "NEW",
     status: "paid",
     priceBadge: "$0+",
-    href: "https://kmnworks.gumroad.com/l/kymdrs",
+    href: "/skills/claude-code-studio",
     available: true,
   },
   {
