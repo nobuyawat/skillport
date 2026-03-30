@@ -182,14 +182,15 @@ export default function KindlePublishingSuitePage() {
               <br />
               <span className="text-brand-400">1日で完結。</span>
             </h1>
-            <p className="mt-6 text-text-tertiary text-base md:text-lg leading-relaxed max-w-xl">
-              実際に7時間で出版 → 収益化まで到達しています。
-              ただしこれは"AI任せ"ではなく、構成・調整まで含めて仕上げる設計です。
-              専門知識がなくても、手順に沿って進めれば同じ流れを再現できます。
+            <p className="mt-6 text-text-secondary/90 text-base md:text-lg leading-relaxed max-w-xl">
+              実際に私は7時間で出版し、その後収益化まで到達しました。
+              この仕組みで再現できるのは、アイデア整理から出版までの流れです。
+              ただしこれは&ldquo;AI任せ&rdquo;ではなく、構成・調整まで含めて仕上げる設計です。
+              専門知識がなくても、手順に沿って進めれば出版までの工程を再現できます。
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
               <a
-                href="https://kmnworks.gumroad.com/l/kindle-publishing-suite"
+                href="https://kmnworks.gumroad.com/l/trwpwt"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex items-center justify-center gap-2 rounded-xl bg-brand-600 px-8 py-4 text-base font-semibold text-white shadow-lg shadow-brand-600/20 transition-all hover:bg-brand-500 hover:shadow-xl hover:scale-[1.02] active:scale-[0.98]"
@@ -464,7 +465,7 @@ export default function KindlePublishingSuitePage() {
             </p>
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
-                href="https://kmnworks.gumroad.com/l/kindle-publishing-suite"
+                href="https://kmnworks.gumroad.com/l/trwpwt"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex items-center gap-2 rounded-xl bg-brand-600 px-10 py-4 text-base font-semibold text-white shadow-lg shadow-brand-600/20 transition-all hover:bg-brand-500 hover:shadow-xl hover:scale-[1.02] active:scale-[0.98]"
