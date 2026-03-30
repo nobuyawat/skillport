@@ -67,7 +67,7 @@ const skills: SkillCard[] = [
   {
     name: "Kindle Publishing Suite",
     description:
-      "アイデアからKindle出版まで、1コマンドで完走。全11スキルが企画・執筆・校正・表紙・EPUB・KDP登録を自動化。",
+      "アイデアからKindle出版まで、1コマンドで完走。全11スキルが企画・執筆・校正・表紙・EPUB・KDP登録を自動化。購入 → 解凍 → /book-run で完了。",
     category: "収益化",
     categoryColor: "text-amber-400 bg-amber-400/10 border-amber-400/20",
     icon: <BookOpen size={20} />,
@@ -75,10 +75,11 @@ const skills: SkillCard[] = [
     rating: 0,
     downloads: "",
     version: "v2.0.0",
-    badge: "Coming Soon",
-    status: "coming-soon",
-    priceBadge: "有料予定",
-    available: false,
+    badge: "¥2,980",
+    status: "paid",
+    priceBadge: "有料",
+    href: "/skills/kindle-publishing-suite",
+    available: true,
   },
   {
     name: "Seed Generator",
