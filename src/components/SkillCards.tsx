@@ -7,7 +7,10 @@ import {
   Download,
   ArrowRight,
   ExternalLink,
+  Clock,
 } from "lucide-react";
+
+type SkillStatus = "free" | "paid" | "coming-soon";
 
 interface SkillCard {
   name: string;
@@ -20,6 +23,7 @@ interface SkillCard {
   downloads: string;
   version: string;
   badge?: string;
+  status: SkillStatus;
   priceBadge: string;
   href?: string;
   available: boolean;
@@ -38,8 +42,9 @@ const skills: SkillCard[] = [
     downloads: "",
     version: "v2.0.0",
     badge: "第1弾",
+    status: "free",
     priceBadge: "無料公開中",
-    href: "https://github.com/nobuyawat/workspace-bootstrap",
+    href: "/setup/workspace-bootstrap",
     available: true,
   },
   {
@@ -54,9 +59,26 @@ const skills: SkillCard[] = [
     downloads: "",
     version: "v1.0.0",
     badge: "NEW",
+    status: "paid",
     priceBadge: "$0+",
     href: "https://kmnworks.gumroad.com/l/kymdrs",
     available: true,
+  },
+  {
+    name: "Kindle Publishing Suite",
+    description:
+      "アイデアからKindle出版まで、1コマンドで完走。全11スキルが企画・執筆・校正・表紙・EPUB・KDP登録を自動化。",
+    category: "収益化",
+    categoryColor: "text-amber-400 bg-amber-400/10 border-amber-400/20",
+    icon: <BookOpen size={20} />,
+    thumbnail: "/images/kindle-publishing-suite-thumb.png",
+    rating: 0,
+    downloads: "",
+    version: "v2.0.0",
+    badge: "Coming Soon",
+    status: "coming-soon",
+    priceBadge: "有料予定",
+    available: false,
   },
   {
     name: "Seed Generator",
@@ -68,6 +90,7 @@ const skills: SkillCard[] = [
     rating: 0,
     downloads: "",
     version: "v2.0.0",
+    status: "coming-soon",
     priceBadge: "準備中",
     available: false,
   },
@@ -81,6 +104,7 @@ const skills: SkillCard[] = [
     rating: 0,
     downloads: "",
     version: "v1.5.0",
+    status: "coming-soon",
     priceBadge: "準備中",
     available: false,
   },
@@ -104,13 +128,13 @@ export default function SkillCards() {
       {/* Section Header */}
       <div className="text-center mb-14">
         <p className="text-sm font-medium text-brand-400 mb-4">
-          公開中の Skills
+          Skill Store
         </p>
         <h2 className="text-3xl font-bold tracking-tight text-text-primary md:text-4xl">
-          今すぐ使える Skills
+          あなたの作業を変える Skills
         </h2>
         <p className="mt-3 text-text-tertiary text-base md:text-lg">
-          すべて対話形式でセットアップできます
+          無料から有料まで。すべて Claude Code で動きます
         </p>
       </div>
 
@@ -118,11 +142,13 @@ export default function SkillCards() {
       <div className="grid gap-5 md:grid-cols-3">
         {skills.map((skill) => {
           const CardWrapper = skill.available ? "a" : "div";
+          const isExternal = skill.href?.startsWith("http");
           const linkProps = skill.available
             ? {
                 href: skill.href,
-                target: "_blank" as const,
-                rel: "noopener noreferrer",
+                ...(isExternal
+                  ? { target: "_blank" as const, rel: "noopener noreferrer" }
+                  : {}),
               }
             : {};
 
@@ -187,7 +213,7 @@ export default function SkillCards() {
               </p>
 
               {/* CTA / Meta row */}
-              {skill.available ? (
+              {skill.status === "free" || skill.status === "paid" ? (
                 <div className="mt-5 border-t border-surface-border/60 pt-4">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-4">
@@ -203,7 +229,7 @@ export default function SkillCards() {
                       </span>
                     </div>
                     <span className="flex items-center gap-1.5 text-xs font-medium text-brand-400 group-hover:text-brand-300 transition-colors">
-                      {skill.href?.includes('gumroad') ? '取得する' : '使ってみる'}
+                      {skill.status === "paid" ? "購入する" : isExternal ? "取得する" : "導入する"}
                       <ArrowRight
                         size={13}
                         className="transition-transform group-hover:translate-x-0.5"
@@ -212,17 +238,18 @@ export default function SkillCards() {
                   </div>
                 </div>
               ) : (
-                <div className="mt-5 flex items-center gap-4 border-t border-surface-border/60 pt-4">
-                  {skill.rating > 0 && <StarRating rating={skill.rating} />}
-                  {skill.downloads && (
-                    <div className="flex items-center gap-1 text-xs text-text-tertiary">
-                      <Download size={11} />
-                      <span>{skill.downloads}</span>
+                <div className="mt-5 border-t border-surface-border/60 pt-4">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-4">
+                      <span className="text-[11px] text-text-tertiary/60 font-mono">
+                        {skill.version}
+                      </span>
                     </div>
-                  )}
-                  <span className="text-[11px] text-text-tertiary/60 font-mono">
-                    {skill.version}
-                  </span>
+                    <span className="flex items-center gap-1.5 text-xs font-medium text-text-tertiary/50">
+                      <Clock size={12} />
+                      近日公開
+                    </span>
+                  </div>
                 </div>
               )}
             </CardWrapper>

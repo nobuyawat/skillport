@@ -1,4 +1,4 @@
-import { ArrowRight, Sparkles, Rocket, Github } from "lucide-react";
+import { ArrowRight, Sparkles, BookOpen } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -11,7 +11,7 @@ export default function Hero() {
         <div className="mb-10 opacity-0 animate-fade-in-up">
           <span className="inline-flex items-center gap-2 rounded-full border border-brand-500/20 bg-brand-600/10 px-4 py-1.5 text-sm text-brand-300">
             <Sparkles size={14} className="text-brand-400" />
-            Early Access 公開中
+            Skill Store
           </span>
         </div>
 
@@ -28,7 +28,7 @@ export default function Hero() {
         {/* Sub Copy */}
         <p className="mt-7 text-lg font-medium tracking-wide text-text-secondary/90 md:text-xl opacity-0 animate-fade-in-up animate-delay-200">
           Claude Code を拡張する{" "}
-          <span className="text-brand-400">AI</span> スキルの配布サイト
+          <span className="text-brand-400">AI スキル</span>のストア
         </p>
 
         {/* CTA Buttons */}
@@ -37,21 +37,28 @@ export default function Hero() {
             href="/setup/workspace-bootstrap"
             className="group flex items-center gap-2 rounded-xl bg-brand-600 px-8 py-4 text-base font-semibold text-white shadow-lg shadow-brand-600/20 transition-all hover:bg-brand-500 hover:shadow-xl hover:shadow-brand-600/30 hover:scale-[1.02] active:scale-[0.98]"
           >
-            <Rocket size={16} />
-            Claude でかんたん導入
+            無料で始める
             <ArrowRight
               size={16}
               className="transition-transform group-hover:translate-x-0.5"
             />
           </a>
           <a
-            href="https://github.com/nobuyawat/workspace-bootstrap"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/start"
             className="flex items-center gap-2 rounded-xl border border-surface-border/80 bg-surface-2/60 px-8 py-4 text-base font-semibold text-text-primary transition-all hover:border-brand-500/30 hover:bg-surface-2 hover:scale-[1.02] active:scale-[0.98]"
           >
-            <Github size={16} />
-            GitHub で確認
+            <BookOpen size={16} />
+            導入方法を見る
+          </a>
+        </div>
+
+        {/* Sub link */}
+        <div className="mt-5 opacity-0 animate-fade-in-up animate-delay-400">
+          <a
+            href="#skills"
+            className="text-sm text-text-tertiary/60 hover:text-brand-400 transition-colors"
+          >
+            または Skill 一覧を見る →
           </a>
         </div>
       </div>

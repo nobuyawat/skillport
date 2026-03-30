@@ -5,7 +5,7 @@ import { Menu, X, Github } from "lucide-react";
 
 const navItems = [
   { label: "Skills", href: "#skills" },
-  { label: "使い方", href: "#how" },
+  { label: "使い方", href: "/start" },
   { label: "今後の展開", href: "#ecosystem" },
 ];
 
