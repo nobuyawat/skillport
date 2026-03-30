@@ -178,7 +178,7 @@ export default function KindlePublishingSuitePage() {
               </span>
             </div>
             <h1 className="text-3xl font-bold tracking-tight md:text-4xl leading-tight">
-              通常数週間かかる出版工程を、
+              通常数週間かかるKindle出版工程を、
               <br />
               <span className="text-brand-400">1日で完結。</span>
             </h1>
@@ -188,22 +188,15 @@ export default function KindlePublishingSuitePage() {
               ただしこれは&ldquo;AI任せ&rdquo;ではなく、構成・調整まで含めて仕上げる設計です。
               専門知識がなくても、手順に沿って進めれば出版までの工程を再現できます。
             </p>
-            <div className="mt-8 flex flex-col sm:flex-row gap-4">
+            <div className="mt-8">
               <a
                 href="https://kmnworks.gumroad.com/l/trwpwt"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center justify-center gap-2 rounded-xl bg-brand-600 px-8 py-4 text-base font-semibold text-white shadow-lg shadow-brand-600/20 transition-all hover:bg-brand-500 hover:shadow-xl hover:scale-[1.02] active:scale-[0.98]"
+                className="group inline-flex items-center justify-center gap-2 rounded-xl bg-brand-600 px-8 py-4 text-base font-semibold text-white shadow-lg shadow-brand-600/20 transition-all hover:bg-brand-500 hover:shadow-xl hover:scale-[1.02] active:scale-[0.98]"
               >
                 今すぐ手に入れる
                 <ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" />
-              </a>
-              <a
-                href="/setup/workspace-bootstrap"
-                className="flex items-center justify-center gap-2 rounded-xl border border-surface-border/80 bg-surface-2/60 px-8 py-4 text-base font-semibold text-text-primary transition-all hover:border-brand-500/30 hover:bg-surface-2 hover:scale-[1.02] active:scale-[0.98]"
-              >
-                <Rocket size={16} />
-                無料で始める
               </a>
             </div>
           </div>
