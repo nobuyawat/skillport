@@ -13,6 +13,9 @@ import {
   Shield,
   Clock,
   Layers,
+  ShoppingCart,
+  Copy,
+  Play,
 } from "lucide-react";
 
 /* ─── Data ─── */
@@ -159,9 +162,12 @@ export default function ClaudeCodeStudioPage() {
                 rel="noopener noreferrer"
                 className="group inline-flex items-center justify-center gap-2 rounded-xl bg-brand-600 px-8 py-4 text-base font-semibold text-white shadow-lg shadow-brand-600/20 transition-all hover:bg-brand-500 hover:shadow-xl hover:scale-[1.02] active:scale-[0.98]"
               >
-                手に入れる
+                Gumroadで取得する
                 <ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" />
               </a>
+              <p className="mt-3 text-xs text-text-tertiary/60">
+                取得後、Claude Code にプロンプトを貼るだけで導入完了
+              </p>
             </div>
           </div>
           <div className="flex-shrink-0">
@@ -280,6 +286,62 @@ export default function ClaudeCodeStudioPage() {
         </div>
       </section>
 
+      {/* ━━━ How to Get ━━━ */}
+      <section className="bg-surface-1/50 border-y border-surface-border/40">
+        <div className="mx-auto max-w-5xl px-6 py-20">
+          <div className="text-center mb-14">
+            <p className="text-sm font-medium text-brand-400 mb-3">Setup</p>
+            <h2 className="text-2xl font-bold md:text-3xl">導入は3ステップ</h2>
+            <p className="mt-3 text-text-tertiary max-w-lg mx-auto">
+              Gumroadで取得後、Claude Codeにプロンプトを貼るだけ。手動ダウンロードは不要です。
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="rounded-2xl border border-surface-border bg-surface-0/80 p-6 text-center">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-600/20 border border-brand-500/30 text-brand-400 mx-auto mb-4">
+                <ShoppingCart size={22} />
+              </div>
+              <div className="text-xs font-mono text-text-tertiary/40 mb-2">STEP 1</div>
+              <h3 className="text-sm font-semibold mb-2">Gumroadで取得</h3>
+              <p className="text-xs text-text-tertiary leading-relaxed">
+                「I want this!」を押すだけ。$0〜 の自由価格です。
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-surface-border bg-surface-0/80 p-6 text-center">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-600/20 border border-cyan-500/30 text-cyan-400 mx-auto mb-4">
+                <Copy size={22} />
+              </div>
+              <div className="text-xs font-mono text-text-tertiary/40 mb-2">STEP 2</div>
+              <h3 className="text-sm font-semibold mb-2">プロンプトを貼り付け</h3>
+              <p className="text-xs text-text-tertiary leading-relaxed">
+                購入後に表示される導入プロンプトを Claude Code にそのまま貼り付けて送信。
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-surface-border bg-surface-0/80 p-6 text-center">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-green-600/20 border border-green-500/30 text-green-400 mx-auto mb-4">
+                <Play size={22} />
+              </div>
+              <div className="text-xs font-mono text-text-tertiary/40 mb-2">STEP 3</div>
+              <h3 className="text-sm font-semibold mb-2">/studio で起動</h3>
+              <p className="text-xs text-text-tertiary leading-relaxed">
+                Claude Codeが自動で取得・配置。完了後 /studio と入力すればReady画面が起動します。
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-8 rounded-xl border border-amber-500/15 bg-amber-500/5 px-5 py-4 flex items-start gap-3 max-w-2xl mx-auto">
+            <Shield size={16} className="text-amber-400 mt-0.5 flex-shrink-0" />
+            <p className="text-xs text-text-secondary leading-relaxed">
+              手動でのダウンロードやファイル配置は不要です。Claude Code がすべて自動で行います。
+              <span className="text-text-tertiary"> ※ Claude Code（Pro / Max / Team）が必要です</span>
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* ━━━ Trust ━━━ */}
       <section className="bg-surface-1/50 border-y border-surface-border/40">
         <div className="mx-auto max-w-5xl px-6 py-20">
@@ -330,12 +392,12 @@ export default function ClaudeCodeStudioPage() {
                 rel="noopener noreferrer"
                 className="group inline-flex items-center gap-2 rounded-xl bg-brand-600 px-10 py-4 text-base font-semibold text-white shadow-lg shadow-brand-600/20 transition-all hover:bg-brand-500 hover:shadow-xl hover:scale-[1.02] active:scale-[0.98]"
               >
-                手に入れる
+                Gumroadで取得する
                 <ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" />
               </a>
             </div>
             <p className="mt-4 text-xs text-text-tertiary/60">
-              $0+ — 好きな金額で取得できます
+              $0+ — 取得後、Claude Code にプロンプトを貼るだけで導入完了
             </p>
           </div>
         </div>
