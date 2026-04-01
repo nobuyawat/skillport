@@ -8,6 +8,7 @@ import {
   ArrowRight,
   ExternalLink,
   Clock,
+  Presentation,
 } from "lucide-react";
 
 type SkillStatus = "free" | "paid" | "coming-soon";
@@ -80,6 +81,21 @@ const skills: SkillCard[] = [
     priceBadge: "有料",
     href: "/skills/kindle-publishing-suite",
     available: true,
+  },
+  {
+    name: "Slide Animation Director",
+    description:
+      "AIでスライドを「作る」から「編集する」へ。台本からスライド生成＋自由配置編集＋PPTX出力まで一気通貫。",
+    category: "コンテンツ",
+    categoryColor: "text-rose-400 bg-rose-400/10 border-rose-400/20",
+    icon: <Presentation size={20} />,
+    thumbnail: "/images/slide-animation-director-thumb.png",
+    rating: 0,
+    downloads: "",
+    version: "v1.0.0",
+    status: "coming-soon" as SkillStatus,
+    priceBadge: "準備中",
+    available: false,
   },
   {
     name: "Seed Generator",
