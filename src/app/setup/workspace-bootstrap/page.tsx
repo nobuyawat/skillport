@@ -9,6 +9,7 @@ import {
   Terminal,
   Sparkles,
   Info,
+  AlertTriangle,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -184,6 +185,27 @@ export default function SetupWorkspaceBootstrap() {
             </div>
             <p className="mt-3 text-xs text-text-readable leading-relaxed">
               対話形式のウィザードが起動し、あなた専用の AI ワークスペースを構築します。
+            </p>
+          </div>
+        </div>
+
+        {/* Chrome Bug Notice */}
+        <div className="mb-12 rounded-xl border border-cyan-500/20 bg-cyan-500/5 px-5 py-4 flex items-start gap-3">
+          <AlertTriangle size={16} className="text-cyan-400 mt-0.5 flex-shrink-0" />
+          <div className="text-sm text-text-readable leading-relaxed">
+            <p className="font-medium text-cyan-300 mb-1">
+              ブラウザ操作について（2026年4月〜）
+            </p>
+            <p>
+              Claude in Chrome の現行バージョンにドメイン制限のバグがあるため、
+              Claude Code からの自動タブ起動が一部ブロックされる場合があります。
+            </p>
+            <p className="mt-2">
+              その場合は、同じ指示を{" "}
+              <span className="font-medium text-text-primary">
+                Claude Desktop チャット
+              </span>{" "}
+              に貼り付けて実行してください。同じ結果が得られます。
             </p>
           </div>
         </div>
