@@ -21,7 +21,7 @@ export default function Cta() {
               <br className="hidden sm:block" />
               AI で変えてみませんか。
             </h2>
-            <p className="mt-4 text-text-tertiary text-base md:text-lg max-w-lg mx-auto">
+            <p className="mt-4 text-text-readable text-base md:text-lg max-w-lg mx-auto">
               無料の Skill から始められます。Claude Code があれば、すぐに使えます。
             </p>
 

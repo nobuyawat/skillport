@@ -68,7 +68,7 @@ const skills: SkillCard[] = [
   {
     name: "Kindle Publishing Suite",
     description:
-      "アイデアからKindle出版まで、1コマンドで完走。全11スキルが企画・執筆・校正・表紙・EPUB・KDP登録を自動化。購入 → 解凍 → /book-run で完了。",
+      "アイデアからKindle出版まで、1コマンドで完走。全11スキルが企画・執筆・校正・表紙・EPUB・KDP登録を自動化。KDP入力はDesktopチャット連携でコピペ一発。",
     category: "収益化",
     categoryColor: "text-amber-400 bg-amber-400/10 border-amber-400/20",
     icon: <BookOpen size={20} />,
@@ -150,7 +150,7 @@ export default function SkillCards() {
         <h2 className="text-3xl font-bold tracking-tight text-text-primary md:text-4xl">
           あなたの作業を変える Skills
         </h2>
-        <p className="mt-3 text-text-tertiary text-base md:text-lg">
+        <p className="mt-3 text-text-readable text-base md:text-lg">
           無料から有料まで。すべて Claude Code で動きます
         </p>
       </div>
@@ -206,7 +206,7 @@ export default function SkillCards() {
                     className={`rounded-full border px-2.5 py-0.5 text-[11px] font-semibold ${
                       skill.available
                         ? "text-emerald-400 bg-emerald-400/10 border-emerald-400/20"
-                        : "text-text-tertiary bg-surface-3/50 border-surface-border"
+                        : "text-text-readable bg-surface-3/50 border-surface-border"
                     }`}
                   >
                     {skill.priceBadge}
@@ -225,7 +225,7 @@ export default function SkillCards() {
               </h3>
 
               {/* Description */}
-              <p className="mt-2 flex-1 text-sm leading-relaxed text-text-tertiary">
+              <p className="mt-2 flex-1 text-sm leading-relaxed text-text-readable">
                 {skill.description}
               </p>
 
@@ -236,7 +236,7 @@ export default function SkillCards() {
                     <div className="flex items-center gap-4">
                       {skill.rating > 0 && <StarRating rating={skill.rating} />}
                       {skill.downloads && (
-                        <div className="flex items-center gap-1 text-xs text-text-tertiary">
+                        <div className="flex items-center gap-1 text-xs text-text-readable">
                           <Download size={11} />
                           <span>{skill.downloads}</span>
                         </div>

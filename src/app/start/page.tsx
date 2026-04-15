@@ -77,7 +77,7 @@ export default function StartPage() {
         <div className="mx-auto flex h-16 max-w-4xl items-center px-6">
           <a
             href="/"
-            className="flex items-center gap-2 text-sm text-text-tertiary hover:text-brand-400 transition-colors"
+            className="flex items-center gap-2 text-sm text-text-readable hover:text-brand-400 transition-colors"
           >
             <ArrowLeft size={16} />
             SkillPort に戻る
@@ -97,7 +97,7 @@ export default function StartPage() {
           <br />
           <span className="text-brand-400">Skill を導入する流れ</span>
         </h1>
-        <p className="mt-4 text-text-tertiary text-base md:text-lg max-w-xl mx-auto">
+        <p className="mt-4 text-text-readable text-base md:text-lg max-w-xl mx-auto">
           SkillPort の Skill は、すべて Claude Code から導入できます。
           <br />
           非エンジニアでも、以下の手順で迷わず始められます。
@@ -115,7 +115,7 @@ export default function StartPage() {
               </div>
               <div>
                 <p className="text-sm font-semibold">Claude Code</p>
-                <p className="text-xs text-text-tertiary mt-0.5">
+                <p className="text-xs text-text-readable mt-0.5">
                   Pro / Max / Team プラン
                 </p>
               </div>
@@ -127,11 +127,11 @@ export default function StartPage() {
               <div>
                 <p className="text-sm font-semibold">
                   Claude in Chrome{" "}
-                  <span className="text-text-tertiary font-normal">
+                  <span className="text-text-readable font-normal">
                     （推奨）
                   </span>
                 </p>
-                <p className="text-xs text-text-tertiary mt-0.5">
+                <p className="text-xs text-text-readable mt-0.5">
                   ブラウザ操作が必要な Skill 用
                 </p>
               </div>
@@ -142,7 +142,7 @@ export default function StartPage() {
               </div>
               <div>
                 <p className="text-sm font-semibold">Chrome ブラウザ</p>
-                <p className="text-xs text-text-tertiary mt-0.5">
+                <p className="text-xs text-text-readable mt-0.5">
                   Claude in Chrome の動作環境
                 </p>
               </div>
@@ -181,7 +181,7 @@ export default function StartPage() {
                     </div>
                   </div>
                   <h3 className="text-base font-semibold">{step.title}</h3>
-                  <p className="mt-2 text-sm text-text-tertiary leading-relaxed">
+                  <p className="mt-2 text-sm text-text-readable leading-relaxed">
                     {step.description}
                   </p>
                   {step.note && (
@@ -202,7 +202,7 @@ export default function StartPage() {
           <h2 className="text-2xl font-bold tracking-tight md:text-3xl">
             準備ができたら、Skill を選びましょう
           </h2>
-          <p className="mt-3 text-text-tertiary">
+          <p className="mt-3 text-text-readable">
             無料の Skill から始められます
           </p>
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">

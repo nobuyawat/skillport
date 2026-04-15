@@ -133,7 +133,7 @@ export default function SlideAnimationDirectorPage() {
       {/* Header */}
       <header className="border-b border-surface-border/60 bg-surface-0/80 backdrop-blur-xl">
         <div className="mx-auto flex h-16 max-w-5xl items-center px-6">
-          <a href="/" className="flex items-center gap-2 text-sm text-text-tertiary hover:text-brand-400 transition-colors">
+          <a href="/" className="flex items-center gap-2 text-sm text-text-readable hover:text-brand-400 transition-colors">
             <ArrowLeft size={16} />
             SkillPort に戻る
           </a>
@@ -186,19 +186,19 @@ export default function SlideAnimationDirectorPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
               <p className="text-2xl font-bold text-brand-400">13</p>
-              <p className="text-xs text-text-tertiary mt-1">スライドタイプ</p>
+              <p className="text-xs text-text-readable mt-1">スライドタイプ</p>
             </div>
             <div>
               <p className="text-2xl font-bold text-brand-400">3</p>
-              <p className="text-xs text-text-tertiary mt-1">生成モード</p>
+              <p className="text-xs text-text-readable mt-1">生成モード</p>
             </div>
             <div>
               <p className="text-2xl font-bold text-brand-400">3</p>
-              <p className="text-xs text-text-tertiary mt-1">画像形状（四角・角丸・円）</p>
+              <p className="text-xs text-text-readable mt-1">画像形状（四角・角丸・円）</p>
             </div>
             <div>
               <p className="text-2xl font-bold text-brand-400">1</p>
-              <p className="text-xs text-text-tertiary mt-1">コマンドで完結</p>
+              <p className="text-xs text-text-readable mt-1">コマンドで完結</p>
             </div>
           </div>
         </div>
@@ -213,7 +213,7 @@ export default function SlideAnimationDirectorPage() {
             </div>
             <div>
               <h2 className="text-xl font-bold">スライド作成の3つの壁</h2>
-              <p className="text-sm text-text-tertiary mt-1">多くの人が直面する課題</p>
+              <p className="text-sm text-text-readable mt-1">多くの人が直面する課題</p>
             </div>
           </div>
 
@@ -222,7 +222,7 @@ export default function SlideAnimationDirectorPage() {
               <CheckCircle2 size={18} className="mt-0.5 shrink-0 text-rose-400" />
               <div>
                 <p className="text-sm font-semibold">スライド作成が面倒</p>
-                <p className="text-xs text-text-tertiary mt-1 leading-relaxed">
+                <p className="text-xs text-text-readable mt-1 leading-relaxed">
                   1枚ずつレイアウトを考え、テキストを配置し、画像を調整する。
                   講座やプレゼンのたびにこの作業を繰り返すのは非効率です。
                 </p>
@@ -232,7 +232,7 @@ export default function SlideAnimationDirectorPage() {
               <CheckCircle2 size={18} className="mt-0.5 shrink-0 text-rose-400" />
               <div>
                 <p className="text-sm font-semibold">テンプレートに縛られる</p>
-                <p className="text-xs text-text-tertiary mt-1 leading-relaxed">
+                <p className="text-xs text-text-readable mt-1 leading-relaxed">
                   既存のスライドツールはテンプレート前提。
                   自分の伝えたい内容に合わせたレイアウトを自由に組めない。
                 </p>
@@ -242,7 +242,7 @@ export default function SlideAnimationDirectorPage() {
               <CheckCircle2 size={18} className="mt-0.5 shrink-0 text-rose-400" />
               <div>
                 <p className="text-sm font-semibold">AI生成はできるが編集ができない</p>
-                <p className="text-xs text-text-tertiary mt-1 leading-relaxed">
+                <p className="text-xs text-text-readable mt-1 leading-relaxed">
                   AIでスライドを生成できるツールはあるが、
                   生成後の編集・画像配置・微調整ができない。生成して終わり。
                 </p>
@@ -257,7 +257,7 @@ export default function SlideAnimationDirectorPage() {
         <div className="text-center mb-14">
           <p className="text-sm font-medium text-brand-400 mb-3">How It Works</p>
           <h2 className="text-2xl font-bold md:text-3xl">4ステップで完成</h2>
-          <p className="mt-3 text-text-tertiary max-w-lg mx-auto">
+          <p className="mt-3 text-text-readable max-w-lg mx-auto">
             「/slide-animation-director」と入力するだけ。
             原稿の入力からPPTX出力まで、対話形式で進みます。
           </p>
@@ -279,7 +279,7 @@ export default function SlideAnimationDirectorPage() {
                     <code className={`text-xs font-mono ${s.color}`}>{s.command}</code>
                   </div>
                   <h3 className="text-sm font-semibold">{s.title}</h3>
-                  <p className="mt-1.5 text-xs text-text-tertiary leading-relaxed">{s.description}</p>
+                  <p className="mt-1.5 text-xs text-text-readable leading-relaxed">{s.description}</p>
                   <div className="mt-3 rounded-lg bg-brand-600/5 border border-brand-500/10 px-3 py-2">
                     <p className="text-[10px] text-brand-400/60 uppercase tracking-wider font-semibold">出力</p>
                     <p className="text-xs text-brand-300 mt-0.5">{s.output}</p>
@@ -297,7 +297,7 @@ export default function SlideAnimationDirectorPage() {
           <div className="text-center mb-14">
             <p className="text-sm font-medium text-rose-400 mb-3">Key Features</p>
             <h2 className="text-2xl font-bold md:text-3xl">生成 + 編集 + 出力を一体化</h2>
-            <p className="mt-3 text-text-tertiary">この3つの機能が、スライド制作を変えます</p>
+            <p className="mt-3 text-text-readable">この3つの機能が、スライド制作を変えます</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
@@ -308,7 +308,7 @@ export default function SlideAnimationDirectorPage() {
                 </div>
                 <h3 className="text-base font-semibold">{h.title}</h3>
                 <p className={`text-xs ${h.color} mt-0.5 mb-3`}>{h.subtitle}</p>
-                <p className="text-sm text-text-tertiary leading-relaxed">{h.description}</p>
+                <p className="text-sm text-text-readable leading-relaxed">{h.description}</p>
               </div>
             ))}
           </div>
@@ -326,7 +326,7 @@ export default function SlideAnimationDirectorPage() {
                 col.bad ? "border-surface-border bg-surface-1/80" : "border-brand-500/30 bg-brand-600/5"
               }`}
             >
-              <h3 className={`text-base font-semibold mb-4 ${col.bad ? "text-text-tertiary" : "text-brand-400"}`}>
+              <h3 className={`text-base font-semibold mb-4 ${col.bad ? "text-text-readable" : "text-brand-400"}`}>
                 {col.label}
               </h3>
               <ul className="space-y-3">
@@ -337,7 +337,7 @@ export default function SlideAnimationDirectorPage() {
                     ) : (
                       <CheckCircle2 size={16} className="mt-0.5 shrink-0 text-brand-400" />
                     )}
-                    <span className={col.bad ? "text-text-tertiary" : "text-text-primary"}>{item}</span>
+                    <span className={col.bad ? "text-text-readable" : "text-text-primary"}>{item}</span>
                   </li>
                 ))}
               </ul>
@@ -350,12 +350,12 @@ export default function SlideAnimationDirectorPage() {
       <section className="bg-surface-1/50 border-y border-surface-border/40">
         <div className="mx-auto max-w-5xl px-6 py-20">
           <h2 className="text-2xl font-bold text-center mb-3">搭載機能</h2>
-          <p className="text-text-tertiary text-center mb-10">1コマンドに統合された機能群</p>
+          <p className="text-text-readable text-center mb-10">1コマンドに統合された機能群</p>
           <div className="grid gap-3 md:grid-cols-2">
             {features.map((f) => (
               <div key={f.name} className="flex items-center gap-4 rounded-xl border border-surface-border bg-surface-0/80 px-5 py-3.5">
                 <span className="text-sm font-semibold text-brand-400 shrink-0">{f.name}</span>
-                <span className="text-sm text-text-tertiary">{f.desc}</span>
+                <span className="text-sm text-text-readable">{f.desc}</span>
               </div>
             ))}
           </div>
@@ -371,21 +371,21 @@ export default function SlideAnimationDirectorPage() {
               <Monitor size={22} />
             </div>
             <h3 className="text-sm font-semibold">レンダリング強化</h3>
-            <p className="text-xs text-text-tertiary">HTMLプレビューとPPTX出力の完全一致を目指す</p>
+            <p className="text-xs text-text-readable">HTMLプレビューとPPTX出力の完全一致を目指す</p>
           </div>
           <div className="flex flex-col items-center text-center gap-3 p-6">
             <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-600/20 border border-brand-500/30 text-brand-400">
               <Zap size={22} />
             </div>
             <h3 className="text-sm font-semibold">テンプレート拡張</h3>
-            <p className="text-xs text-text-tertiary">スライドタイプの追加とカスタムテーマ対応</p>
+            <p className="text-xs text-text-readable">スライドタイプの追加とカスタムテーマ対応</p>
           </div>
           <div className="flex flex-col items-center text-center gap-3 p-6">
             <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-600/20 border border-cyan-500/30 text-cyan-400">
               <Sparkles size={22} />
             </div>
             <h3 className="text-sm font-semibold">アニメーション強化</h3>
-            <p className="text-xs text-text-tertiary">複雑なビルドアニメーションとトランジション</p>
+            <p className="text-xs text-text-readable">複雑なビルドアニメーションとトランジション</p>
           </div>
         </div>
       </section>
@@ -400,7 +400,7 @@ export default function SlideAnimationDirectorPage() {
               <br />
               もっとシンプルに。
             </h2>
-            <p className="mt-4 text-text-tertiary text-base md:text-lg max-w-lg mx-auto">
+            <p className="mt-4 text-text-readable text-base md:text-lg max-w-lg mx-auto">
               台本さえあれば、あとはAIが最適なスライドを提案し、
               あなたが自由に仕上げる。
             </p>

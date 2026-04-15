@@ -48,7 +48,7 @@ export default function SetupWorkspaceBootstrap() {
         <div className="mx-auto max-w-4xl px-6 py-4 flex items-center justify-between">
           <Link
             href="/"
-            className="flex items-center gap-2 text-sm text-text-tertiary hover:text-text-primary transition-colors"
+            className="flex items-center gap-2 text-sm text-text-readable hover:text-text-primary transition-colors"
           >
             <ArrowLeft size={16} />
             SkillPort に戻る
@@ -73,7 +73,7 @@ export default function SetupWorkspaceBootstrap() {
             <br />
             <span className="text-brand-400">かんたん導入</span>
           </h1>
-          <p className="mt-4 text-text-tertiary text-base md:text-lg leading-relaxed max-w-lg mx-auto">
+          <p className="mt-4 text-text-readable text-base md:text-lg leading-relaxed max-w-lg mx-auto">
             以下の手順で Workspace Bootstrap を
             <br className="sm:hidden" />
             数分で導入できます。
@@ -131,7 +131,7 @@ export default function SetupWorkspaceBootstrap() {
             {/* Copy block */}
             <div className="rounded-xl border border-brand-500/20 bg-surface-1 overflow-hidden">
               <div className="flex items-center justify-between border-b border-surface-border/40 px-4 py-2.5 bg-surface-2/40">
-                <div className="flex items-center gap-2 text-xs text-text-tertiary">
+                <div className="flex items-center gap-2 text-xs text-text-readable">
                   <Terminal size={13} />
                   Claude Code への依頼文
                 </div>
@@ -182,7 +182,7 @@ export default function SetupWorkspaceBootstrap() {
                 /workspace-bootstrap-setup
               </code>
             </div>
-            <p className="mt-3 text-xs text-text-tertiary leading-relaxed">
+            <p className="mt-3 text-xs text-text-readable leading-relaxed">
               対話形式のウィザードが起動し、あなた専用の AI ワークスペースを構築します。
             </p>
           </div>
@@ -198,7 +198,7 @@ export default function SetupWorkspaceBootstrap() {
             <h3 className="text-xl font-bold mb-3">
               あなた専用の AI ワークスペースが完成
             </h3>
-            <p className="text-sm text-text-tertiary leading-relaxed max-w-md mx-auto">
+            <p className="text-sm text-text-readable leading-relaxed max-w-md mx-auto">
               AI 作業に必要なサイトを 1 コマンドで全部開けるようになります。
               Chrome のタブ起動、アカウント切替、ログイン確認を自動化。
             </p>
@@ -208,7 +208,7 @@ export default function SetupWorkspaceBootstrap() {
           <div className="mt-10 flex justify-center">
             <Link
               href="/"
-              className="group flex items-center gap-2 text-sm text-text-tertiary hover:text-brand-400 transition-colors"
+              className="group flex items-center gap-2 text-sm text-text-readable hover:text-brand-400 transition-colors"
             >
               <ArrowLeft size={14} />
               SkillPort トップに戻る

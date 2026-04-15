@@ -26,7 +26,7 @@ export default function QuickSteps() {
     <section id="how" className="relative border-t border-surface-border/40">
       <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
         {/* Lead-in message (moved from Hero) */}
-        <p className="mx-auto mb-16 max-w-xl text-center text-base leading-relaxed text-text-tertiary md:text-lg">
+        <p className="mx-auto mb-16 max-w-xl text-center text-base leading-relaxed text-text-readable md:text-lg">
           SkillPort の Skills は、ダウンロードして質問に答えるだけ。
           <br className="hidden sm:block" />
           GitHub の知識もターミナルの操作も必要ありません。
@@ -64,7 +64,7 @@ export default function QuickSteps() {
               <h3 className="text-base font-semibold text-text-primary mb-2">
                 {step.title}
               </h3>
-              <p className="text-sm text-text-tertiary leading-relaxed max-w-[220px]">
+              <p className="text-sm text-text-readable leading-relaxed max-w-[220px]">
                 {step.description}
               </p>
             </div>

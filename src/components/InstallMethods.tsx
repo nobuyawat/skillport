@@ -12,7 +12,7 @@ export default function InstallMethods() {
         <h2 className="text-3xl font-bold tracking-tight text-text-primary md:text-4xl">
           Skills を導入する方法
         </h2>
-        <p className="mt-3 text-text-tertiary text-base md:text-lg">
+        <p className="mt-3 text-text-readable text-base md:text-lg">
           SkillPort の Skills は 2 つの方法で導入できます
         </p>
       </div>
@@ -36,7 +36,7 @@ export default function InstallMethods() {
           <h3 className="text-lg font-bold text-text-primary mb-2">
             Claude in Chrome を使う
           </h3>
-          <p className="text-sm text-text-tertiary mb-6 leading-relaxed">
+          <p className="text-sm text-text-readable mb-6 leading-relaxed">
             セットアップページを開いて Claude に依頼するだけ。
             <br />
             コマンド操作は不要です。
@@ -72,14 +72,14 @@ export default function InstallMethods() {
 
         {/* Method 2: GitHub */}
         <div className="rounded-2xl border border-surface-border bg-surface-1/80 p-8 backdrop-blur-sm">
-          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-surface-2 border border-surface-border text-text-tertiary mb-6">
+          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-surface-2 border border-surface-border text-text-readable mb-6">
             <Terminal size={22} />
           </div>
 
           <h3 className="text-lg font-bold text-text-primary mb-2">
             手動導入（エンジニア向け）
           </h3>
-          <p className="text-sm text-text-tertiary mb-6 leading-relaxed">
+          <p className="text-sm text-text-readable mb-6 leading-relaxed">
             GitHub から直接クローンして導入します。
             <br />
             ターミナル操作に慣れている方向け。
@@ -93,10 +93,10 @@ export default function InstallMethods() {
               "Claude Code でセットアップ実行",
             ].map((step, i) => (
               <div key={i} className="flex items-center gap-3">
-                <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-surface-3/60 text-[11px] font-bold text-text-tertiary">
+                <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-surface-3/60 text-[11px] font-bold text-text-readable">
                   {i + 1}
                 </span>
-                <span className="text-sm text-text-tertiary">{step}</span>
+                <span className="text-sm text-text-readable">{step}</span>
               </div>
             ))}
           </div>

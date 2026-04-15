@@ -50,7 +50,7 @@ export default function Solution() {
           <h2 className="text-3xl font-bold tracking-tight text-text-primary md:text-4xl">
             ダウンロードして、質問に答えるだけ。
           </h2>
-          <p className="mt-4 text-text-tertiary text-base md:text-lg max-w-xl mx-auto">
+          <p className="mt-4 text-text-readable text-base md:text-lg max-w-xl mx-auto">
             難しい操作は一切ありません。
             <br />
             Claude Code があなたの代わりにすべて設定します。
@@ -75,7 +75,7 @@ export default function Solution() {
               <h3 className="text-base font-semibold text-text-primary mb-2">
                 {step.title}
               </h3>
-              <p className="text-sm leading-relaxed text-text-tertiary">
+              <p className="text-sm leading-relaxed text-text-readable">
                 {step.description}
               </p>
             </div>
@@ -87,8 +87,8 @@ export default function Solution() {
           <div className="cli-block overflow-hidden transition-all duration-300">
             {/* Title bar */}
             <div className="flex items-center gap-2 border-b border-surface-border/60 px-4 py-3">
-              <Terminal size={14} className="text-text-tertiary" />
-              <span className="text-xs text-text-tertiary font-medium">
+              <Terminal size={14} className="text-text-readable" />
+              <span className="text-xs text-text-readable font-medium">
                 Claude Code
               </span>
               <div className="ml-auto flex gap-1.5">
@@ -102,7 +102,7 @@ export default function Solution() {
             <div className="p-5 space-y-4 text-sm">
               <div>
                 <span className="text-brand-400 font-medium">Claude</span>
-                <span className="text-text-tertiary">
+                <span className="text-text-readable">
                   {" "}
                   ワークスペースに追加するサービス名を教えてください。
                 </span>
@@ -113,7 +113,7 @@ export default function Solution() {
               </div>
               <div>
                 <span className="text-brand-400 font-medium">Claude</span>
-                <span className="text-text-tertiary">
+                <span className="text-text-readable">
                   {" "}
                   URL は https://chat.openai.com でよいですか？
                 </span>
@@ -124,7 +124,7 @@ export default function Solution() {
               </div>
               <div>
                 <span className="text-brand-400 font-medium">Claude</span>
-                <span className="text-text-tertiary">
+                <span className="text-text-readable">
                   {" "}
                   使用するアカウント（メールアドレス）は？
                 </span>
@@ -138,14 +138,14 @@ export default function Solution() {
               </div>
               <div className="pt-2 border-t border-surface-border/40">
                 <span className="text-brand-400 font-medium">Claude</span>
-                <span className="text-text-tertiary">
+                <span className="text-text-readable">
                   {" "}
                   設定完了しました。{" "}
                 </span>
                 <span className="text-emerald-400 font-medium">
                   /my-workspace
                 </span>
-                <span className="text-text-tertiary">
+                <span className="text-text-readable">
                   {" "}
                   で起動できます。
                 </span>

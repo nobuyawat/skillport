@@ -19,12 +19,12 @@ export default function Problem() {
           <h2 className="text-3xl font-bold tracking-tight text-text-primary md:text-4xl text-center md:text-left">
             AI ツールは増えている。
             <br />
-            <span className="text-text-tertiary">
+            <span className="text-text-readable">
               でも、使いこなせる人は少ない。
             </span>
           </h2>
 
-          <p className="mt-6 text-base leading-relaxed text-text-tertiary md:text-lg text-center md:text-left">
+          <p className="mt-6 text-base leading-relaxed text-text-readable md:text-lg text-center md:text-left">
             Claude Code には便利な Skills（自動化ツール）がたくさんあります。
             <br />
             しかし多くの人が、導入の段階でつまずいています。

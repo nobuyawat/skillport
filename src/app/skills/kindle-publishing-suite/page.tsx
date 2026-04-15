@@ -90,8 +90,8 @@ const demoSteps = [
     step: "6",
     icon: <Upload size={22} />,
     title: "KDPに出版する",
-    command: "Claude in Chrome",
-    description: "タイトル・説明文・キーワードを自動入力。カテゴリとファイルアップロードだけ手動で操作。",
+    command: "Desktop連携",
+    description: "生成されたプロンプトをDesktopチャットに貼るだけ。タイトル・説明文・キーワードが自動入力されます。",
     output: "Amazonに掲載（審査後）",
     color: "text-brand-400",
     border: "border-brand-500/20",
@@ -118,8 +118,8 @@ const highlights = [
   {
     icon: <Monitor size={24} />,
     title: "KDPナビゲート",
-    subtitle: "最後まで迷わない",
-    description: "Claude in Chrome がKDP管理画面のフォームに自動入力。英語の設定画面もAIが日本語でガイド。手動操作が必要な箇所は事前に明示されます。",
+    subtitle: "コピペ一発で入力完了",
+    description: "Claude Codeが生成するプロンプトをDesktopチャットに貼るだけ。KDP管理画面のフォームにタイトル・説明文・キーワードが自動入力されます。",
     color: "text-brand-400",
     bgColor: "bg-brand-600/20 border-brand-500/30",
   },
@@ -143,7 +143,7 @@ const differences = [
       "11スキルが統合済み",
       "/book-run 1コマンドで全工程ナビ",
       "表紙制作アプリ内蔵",
-      "KDP登録をClaude in Chromeが補助",
+      "KDP登録はDesktopチャットにコピペで完了",
       "実証済みの工程（7時間で出版完了）",
     ],
     bad: false,
@@ -158,7 +158,7 @@ export default function KindlePublishingSuitePage() {
       {/* Header */}
       <header className="border-b border-surface-border/60 bg-surface-0/80 backdrop-blur-xl">
         <div className="mx-auto flex h-16 max-w-5xl items-center px-6">
-          <a href="/" className="flex items-center gap-2 text-sm text-text-tertiary hover:text-brand-400 transition-colors">
+          <a href="/" className="flex items-center gap-2 text-sm text-text-secondary hover:text-brand-400 transition-colors">
             <ArrowLeft size={16} />
             SkillPort に戻る
           </a>
@@ -182,11 +182,11 @@ export default function KindlePublishingSuitePage() {
               <br />
               <span className="text-brand-400">1日で完結。</span>
             </h1>
-            <p className="mt-6 text-text-secondary/90 text-base md:text-lg leading-relaxed max-w-xl">
-              実際に私は7時間で出版し、その後収益化まで到達しました。
-              この仕組みで再現できるのは、アイデア整理から出版までの流れです。
-              ただしこれは&ldquo;AI任せ&rdquo;ではなく、構成・調整まで含めて仕上げる設計です。
-              専門知識がなくても、手順に沿って進めれば出版までの工程を再現できます。
+            <p className="mt-6 text-text-readable/90 text-base md:text-lg leading-relaxed max-w-xl">
+              初回テストでは構想から出版まで7時間で完了し、収益化まで到達。
+              アイデア整理・執筆・校正・表紙・EPUB生成・KDP登録の全工程を、
+              Phase 1〜7の対話形式でナビゲートします。
+              生成して終わりではなく、各工程で確認・調整を挟む設計です。
             </p>
             <div className="mt-8">
               <a
@@ -216,19 +216,19 @@ export default function KindlePublishingSuitePage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
               <p className="text-2xl font-bold text-brand-400">7時間</p>
-              <p className="text-xs text-text-tertiary mt-1">構想から出版まで</p>
+              <p className="text-xs text-text-secondary mt-1">構想から出版まで</p>
             </div>
             <div>
               <p className="text-2xl font-bold text-brand-400">11</p>
-              <p className="text-xs text-text-tertiary mt-1">統合スキル数</p>
+              <p className="text-xs text-text-secondary mt-1">統合スキル数</p>
             </div>
             <div>
               <p className="text-2xl font-bold text-brand-400">44,406</p>
-              <p className="text-xs text-text-tertiary mt-1">自動生成された文字数</p>
+              <p className="text-xs text-text-secondary mt-1">自動生成された文字数</p>
             </div>
             <div>
               <p className="text-2xl font-bold text-brand-400">86%</p>
-              <p className="text-xs text-text-tertiary mt-1">工程の自動化率</p>
+              <p className="text-xs text-text-secondary mt-1">工程の自動化率</p>
             </div>
           </div>
         </div>
@@ -239,7 +239,7 @@ export default function KindlePublishingSuitePage() {
         <div className="text-center mb-14">
           <p className="text-sm font-medium text-brand-400 mb-3">How It Works</p>
           <h2 className="text-2xl font-bold md:text-3xl">実際はこう動きます</h2>
-          <p className="mt-3 text-text-tertiary max-w-lg mx-auto">
+          <p className="mt-3 text-text-secondary max-w-lg mx-auto">
             「/book-run」と入力すると、以下の6ステップをナビゲートします。
             各ステップで内容を確認しながら進められます。
           </p>
@@ -261,7 +261,7 @@ export default function KindlePublishingSuitePage() {
                     <code className={`text-xs font-mono ${s.color}`}>{s.command}</code>
                   </div>
                   <h3 className="text-sm font-semibold">{s.title}</h3>
-                  <p className="mt-1.5 text-xs text-text-tertiary leading-relaxed">{s.description}</p>
+                  <p className="mt-1.5 text-xs text-text-secondary leading-relaxed">{s.description}</p>
                   <div className="mt-3 rounded-lg bg-brand-600/5 border border-brand-500/10 px-3 py-2">
                     <p className="text-[10px] text-brand-400/60 uppercase tracking-wider font-semibold">出力</p>
                     <p className="text-xs text-brand-300 mt-0.5">{s.output}</p>
@@ -279,7 +279,7 @@ export default function KindlePublishingSuitePage() {
           <div className="text-center mb-14">
             <p className="text-sm font-medium text-amber-400 mb-3">Key Features</p>
             <h2 className="text-2xl font-bold md:text-3xl">なぜこの仕組みは完成できるのか</h2>
-            <p className="mt-3 text-text-tertiary">この3つの機能が、途中で止まらない設計を支えています</p>
+            <p className="mt-3 text-text-secondary">この3つの機能が、途中で止まらない設計を支えています</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
@@ -290,7 +290,7 @@ export default function KindlePublishingSuitePage() {
                 </div>
                 <h3 className="text-base font-semibold">{h.title}</h3>
                 <p className={`text-xs ${h.color} mt-0.5 mb-3`}>{h.subtitle}</p>
-                <p className="text-sm text-text-tertiary leading-relaxed">{h.description}</p>
+                <p className="text-sm text-text-secondary leading-relaxed">{h.description}</p>
               </div>
             ))}
           </div>
@@ -306,7 +306,7 @@ export default function KindlePublishingSuitePage() {
             </div>
             <div>
               <h2 className="text-xl font-bold">AI本って大丈夫？</h2>
-              <p className="text-sm text-text-tertiary mt-1">よくある不安にお答えします</p>
+              <p className="text-sm text-text-secondary mt-1">よくある不安にお答えします</p>
             </div>
           </div>
 
@@ -315,7 +315,7 @@ export default function KindlePublishingSuitePage() {
               <CheckCircle2 size={18} className="mt-0.5 shrink-0 text-emerald-400" />
               <div>
                 <p className="text-sm font-semibold">量産AI本ではありません</p>
-                <p className="text-xs text-text-tertiary mt-1 leading-relaxed">
+                <p className="text-xs text-text-secondary mt-1 leading-relaxed">
                   このスキルは「生成して終わり」ではなく、各工程で内容を確認・修正しながら進める設計です。
                   章ごとにトーンを調整し、校正で品質を整え、プレビューで最終確認する。人間の判断が入る仕組みになっています。
                 </p>
@@ -325,7 +325,7 @@ export default function KindlePublishingSuitePage() {
               <CheckCircle2 size={18} className="mt-0.5 shrink-0 text-emerald-400" />
               <div>
                 <p className="text-sm font-semibold">構成・調整まで含めた設計</p>
-                <p className="text-xs text-text-tertiary mt-1 leading-relaxed">
+                <p className="text-xs text-text-secondary mt-1 leading-relaxed">
                   AIが生成するのは「下書き」です。そこから文体の調整、事実確認、構成の見直しをナビゲーターが促します。
                   実際のテストでも、文体修正だけで2回の書き直しを行っています。
                 </p>
@@ -335,7 +335,7 @@ export default function KindlePublishingSuitePage() {
               <CheckCircle2 size={18} className="mt-0.5 shrink-0 text-emerald-400" />
               <div>
                 <p className="text-sm font-semibold">自分の内容として仕上げられる</p>
-                <p className="text-xs text-text-tertiary mt-1 leading-relaxed">
+                <p className="text-xs text-text-secondary mt-1 leading-relaxed">
                   入力するのはあなた自身のアイデアと経験です。AIはそれを構造化し、文章にする作業を担当します。
                   最終的な内容の責任と著作権は、あなたにあります。
                 </p>
@@ -357,7 +357,7 @@ export default function KindlePublishingSuitePage() {
                   col.bad ? "border-surface-border bg-surface-1/80" : "border-brand-500/30 bg-brand-600/5"
                 }`}
               >
-                <h3 className={`text-base font-semibold mb-4 ${col.bad ? "text-text-tertiary" : "text-brand-400"}`}>
+                <h3 className={`text-base font-semibold mb-4 ${col.bad ? "text-text-readable" : "text-brand-400"}`}>
                   {col.label}
                 </h3>
                 <ul className="space-y-3">
@@ -368,7 +368,7 @@ export default function KindlePublishingSuitePage() {
                       ) : (
                         <CheckCircle2 size={16} className="mt-0.5 shrink-0 text-brand-400" />
                       )}
-                      <span className={col.bad ? "text-text-tertiary" : "text-text-primary"}>{item}</span>
+                      <span className={col.bad ? "text-text-readable" : "text-text-primary"}>{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -381,12 +381,12 @@ export default function KindlePublishingSuitePage() {
       {/* ━━━ 11 Skills ━━━ */}
       <section className="mx-auto max-w-5xl px-6 py-20">
         <h2 className="text-2xl font-bold text-center mb-3">含まれる 11 スキル</h2>
-        <p className="text-text-tertiary text-center mb-10">すべてが連携して動く統合パッケージ</p>
+        <p className="text-text-secondary text-center mb-10">すべてが連携して動く統合パッケージ</p>
         <div className="grid gap-3 md:grid-cols-2">
           {skills.map((s) => (
             <div key={s.name} className="flex items-center gap-4 rounded-xl border border-surface-border bg-surface-1/80 px-5 py-3.5">
               <code className="text-sm font-mono text-brand-400 shrink-0">{s.name}</code>
-              <span className="text-sm text-text-tertiary">{s.desc}</span>
+              <span className="text-sm text-text-secondary">{s.desc}</span>
             </div>
           ))}
         </div>
@@ -396,27 +396,34 @@ export default function KindlePublishingSuitePage() {
       <section className="bg-surface-1/50 border-y border-surface-border/40">
         <div className="mx-auto max-w-5xl px-6 py-20">
           <h2 className="text-2xl font-bold text-center mb-10">安心して使える理由</h2>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="flex flex-col items-center text-center gap-3 p-6">
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-600/20 border border-emerald-500/30 text-emerald-400">
                 <Shield size={22} />
               </div>
               <h3 className="text-sm font-semibold">実証済み</h3>
-              <p className="text-xs text-text-tertiary">開発者自身が7時間で1冊出版。KDPで販売中</p>
+              <p className="text-xs text-text-readable">初回テストで7時間で出版完了。KDPで販売実績あり</p>
             </div>
             <div className="flex flex-col items-center text-center gap-3 p-6">
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-600/20 border border-brand-500/30 text-brand-400">
                 <Zap size={22} />
               </div>
               <h3 className="text-sm font-semibold">非エンジニア向け</h3>
-              <p className="text-xs text-text-tertiary">プログラミング不要。対話するだけで完結</p>
+              <p className="text-xs text-text-readable">プログラミング不要。対話するだけで完結</p>
             </div>
             <div className="flex flex-col items-center text-center gap-3 p-6">
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-amber-600/20 border border-amber-500/30 text-amber-400">
                 <Clock size={22} />
               </div>
               <h3 className="text-sm font-semibold">継続的に改善</h3>
-              <p className="text-xs text-text-tertiary">実運用テストで5点の改善を反映済み（v2）</p>
+              <p className="text-xs text-text-readable">実運用テストで5点の改善を反映済み（v2）</p>
+            </div>
+            <div className="flex flex-col items-center text-center gap-3 p-6">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-600/20 border border-cyan-500/30 text-cyan-400">
+                <CheckCircle2 size={22} />
+              </div>
+              <h3 className="text-sm font-semibold">既知の制限も対応済み</h3>
+              <p className="text-xs text-text-readable">Chrome拡張の制限はDesktopチャット連携で解決。コピペで動作確認済み</p>
             </div>
           </div>
         </div>
@@ -425,9 +432,9 @@ export default function KindlePublishingSuitePage() {
       {/* ━━━ ⑥ 無料で始める導線 ━━━ */}
       <section className="mx-auto max-w-5xl px-6 py-16">
         <div className="rounded-2xl border border-surface-border bg-surface-1/80 p-8 md:p-10 text-center">
-          <p className="text-sm text-text-tertiary mb-2">まずは無料で試したい方へ</p>
+          <p className="text-sm text-text-secondary mb-2">まずは無料で試したい方へ</p>
           <h3 className="text-xl font-bold">Workspace Bootstrap で体験する</h3>
-          <p className="mt-3 text-sm text-text-tertiary max-w-md mx-auto">
+          <p className="mt-3 text-sm text-text-secondary max-w-md mx-auto">
             SkillPort の無料スキルで Claude Code の操作感を体験できます。
             有料スキルと同じ仕組みで動くので、導入の流れがわかります。
           </p>
@@ -453,7 +460,7 @@ export default function KindlePublishingSuitePage() {
               <br />
               商品にしませんか？
             </h2>
-            <p className="mt-4 text-text-tertiary text-base md:text-lg max-w-lg mx-auto">
+            <p className="mt-4 text-text-secondary text-base md:text-lg max-w-lg mx-auto">
               アイデアさえあれば、あとは Claude Code が一緒に作ってくれます。
             </p>
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">

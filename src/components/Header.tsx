@@ -66,7 +66,7 @@ export default function Header() {
             href="https://github.com/nobuyawat/workspace-bootstrap"
             target="_blank"
             rel="noopener noreferrer"
-            className="ml-1 rounded-lg p-2 text-text-tertiary transition-colors hover:text-text-primary hover:bg-surface-2/60"
+            className="ml-1 rounded-lg p-2 text-text-readable transition-colors hover:text-text-primary hover:bg-surface-2/60"
             aria-label="GitHub"
           >
             <Github size={18} />

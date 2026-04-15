@@ -126,7 +126,7 @@ export default function ClaudeCodeStudioPage() {
       {/* Header */}
       <header className="border-b border-surface-border/60 bg-surface-0/80 backdrop-blur-xl">
         <div className="mx-auto flex h-16 max-w-5xl items-center px-6">
-          <a href="/" className="flex items-center gap-2 text-sm text-text-tertiary hover:text-brand-400 transition-colors">
+          <a href="/" className="flex items-center gap-2 text-sm text-text-readable hover:text-brand-400 transition-colors">
             <ArrowLeft size={16} />
             SkillPort に戻る
           </a>
@@ -187,7 +187,7 @@ export default function ClaudeCodeStudioPage() {
             {stats.map((s) => (
               <div key={s.value}>
                 <p className="text-xl font-bold text-brand-400">{s.value}</p>
-                <p className="text-xs text-text-tertiary mt-1">{s.label}</p>
+                <p className="text-xs text-text-readable mt-1">{s.label}</p>
               </div>
             ))}
           </div>
@@ -199,7 +199,7 @@ export default function ClaudeCodeStudioPage() {
         <div className="text-center mb-14">
           <p className="text-sm font-medium text-brand-400 mb-3">How It Works</p>
           <h2 className="text-2xl font-bold md:text-3xl">実際はこう動きます</h2>
-          <p className="mt-3 text-text-tertiary max-w-lg mx-auto">
+          <p className="mt-3 text-text-readable max-w-lg mx-auto">
             「/studio」と入力すると、以下の4ステップで進みます
           </p>
         </div>
@@ -219,7 +219,7 @@ export default function ClaudeCodeStudioPage() {
                     <span className="text-xs font-mono text-text-tertiary/40">STEP {s.step}</span>
                   </div>
                   <h3 className="text-sm font-semibold">{s.title}</h3>
-                  <p className="mt-1.5 text-xs text-text-tertiary leading-relaxed">{s.description}</p>
+                  <p className="mt-1.5 text-xs text-text-readable leading-relaxed">{s.description}</p>
                   <div className="mt-3 rounded-lg bg-brand-600/5 border border-brand-500/10 px-3 py-2">
                     <p className="text-[10px] text-brand-400/60 uppercase tracking-wider font-semibold">結果</p>
                     <p className="text-xs text-brand-300 mt-0.5">{s.output}</p>
@@ -237,7 +237,7 @@ export default function ClaudeCodeStudioPage() {
           <div className="text-center mb-14">
             <p className="text-sm font-medium text-green-400 mb-3">Key Features</p>
             <h2 className="text-2xl font-bold md:text-3xl">なぜ「動く」のか</h2>
-            <p className="mt-3 text-text-tertiary">この3つの技術が、チャットからの直接UI生成を実現しています</p>
+            <p className="mt-3 text-text-readable">この3つの技術が、チャットからの直接UI生成を実現しています</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
@@ -248,7 +248,7 @@ export default function ClaudeCodeStudioPage() {
                 </div>
                 <h3 className="text-base font-semibold">{f.title}</h3>
                 <p className={`text-xs ${f.color} mt-0.5 mb-3`}>{f.subtitle}</p>
-                <p className="text-sm text-text-tertiary leading-relaxed">{f.description}</p>
+                <p className="text-sm text-text-readable leading-relaxed">{f.description}</p>
               </div>
             ))}
           </div>
@@ -266,7 +266,7 @@ export default function ClaudeCodeStudioPage() {
                 col.bad ? "border-surface-border bg-surface-1/80" : "border-brand-500/30 bg-brand-600/5"
               }`}
             >
-              <h3 className={`text-base font-semibold mb-4 ${col.bad ? "text-text-tertiary" : "text-brand-400"}`}>
+              <h3 className={`text-base font-semibold mb-4 ${col.bad ? "text-text-readable" : "text-brand-400"}`}>
                 {col.label}
               </h3>
               <ul className="space-y-3">
@@ -277,7 +277,7 @@ export default function ClaudeCodeStudioPage() {
                     ) : (
                       <CheckCircle2 size={16} className="mt-0.5 shrink-0 text-brand-400" />
                     )}
-                    <span className={col.bad ? "text-text-tertiary" : "text-text-primary"}>{item}</span>
+                    <span className={col.bad ? "text-text-readable" : "text-text-primary"}>{item}</span>
                   </li>
                 ))}
               </ul>
@@ -292,7 +292,7 @@ export default function ClaudeCodeStudioPage() {
           <div className="text-center mb-14">
             <p className="text-sm font-medium text-brand-400 mb-3">Setup</p>
             <h2 className="text-2xl font-bold md:text-3xl">導入は3ステップ</h2>
-            <p className="mt-3 text-text-tertiary max-w-lg mx-auto">
+            <p className="mt-3 text-text-readable max-w-lg mx-auto">
               Gumroadで取得後、Claude Codeにプロンプトを貼るだけ。手動ダウンロードは不要です。
             </p>
           </div>
@@ -304,7 +304,7 @@ export default function ClaudeCodeStudioPage() {
               </div>
               <div className="text-xs font-mono text-text-tertiary/40 mb-2">STEP 1</div>
               <h3 className="text-sm font-semibold mb-2">Gumroadで取得</h3>
-              <p className="text-xs text-text-tertiary leading-relaxed">
+              <p className="text-xs text-text-readable leading-relaxed">
                 「I want this!」を押すだけ。$0〜 の自由価格です。
               </p>
             </div>
@@ -315,7 +315,7 @@ export default function ClaudeCodeStudioPage() {
               </div>
               <div className="text-xs font-mono text-text-tertiary/40 mb-2">STEP 2</div>
               <h3 className="text-sm font-semibold mb-2">プロンプトを貼り付け</h3>
-              <p className="text-xs text-text-tertiary leading-relaxed">
+              <p className="text-xs text-text-readable leading-relaxed">
                 購入後に表示される導入プロンプトを Claude Code にそのまま貼り付けて送信。
               </p>
             </div>
@@ -326,7 +326,7 @@ export default function ClaudeCodeStudioPage() {
               </div>
               <div className="text-xs font-mono text-text-tertiary/40 mb-2">STEP 3</div>
               <h3 className="text-sm font-semibold mb-2">/studio で起動</h3>
-              <p className="text-xs text-text-tertiary leading-relaxed">
+              <p className="text-xs text-text-readable leading-relaxed">
                 Claude Codeが自動で取得・配置。完了後 /studio と入力すればReady画面が起動します。
               </p>
             </div>
@@ -336,7 +336,7 @@ export default function ClaudeCodeStudioPage() {
             <Shield size={16} className="text-amber-400 mt-0.5 flex-shrink-0" />
             <p className="text-xs text-text-secondary leading-relaxed">
               手動でのダウンロードやファイル配置は不要です。Claude Code がすべて自動で行います。
-              <span className="text-text-tertiary"> ※ Claude Code（Pro / Max / Team）が必要です</span>
+              <span className="text-text-readable"> ※ Claude Code（Pro / Max / Team）が必要です</span>
             </p>
           </div>
         </div>
@@ -352,21 +352,21 @@ export default function ClaudeCodeStudioPage() {
                 <Layers size={22} />
               </div>
               <h3 className="text-sm font-semibold">非エンジニア</h3>
-              <p className="text-xs text-text-tertiary">コードを書かずに動くUIを作りたい方</p>
+              <p className="text-xs text-text-readable">コードを書かずに動くUIを作りたい方</p>
             </div>
             <div className="flex flex-col items-center text-center gap-3 p-6">
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-600/20 border border-brand-500/30 text-brand-400">
                 <Zap size={22} />
               </div>
               <h3 className="text-sm font-semibold">高速プロトタイピング</h3>
-              <p className="text-xs text-text-tertiary">アイデアをすぐ形にしたい方</p>
+              <p className="text-xs text-text-readable">アイデアをすぐ形にしたい方</p>
             </div>
             <div className="flex flex-col items-center text-center gap-3 p-6">
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-600/20 border border-cyan-500/30 text-cyan-400">
                 <Monitor size={22} />
               </div>
               <h3 className="text-sm font-semibold">Claude Code ユーザー</h3>
-              <p className="text-xs text-text-tertiary">開発体験をもっと直感的にしたい方</p>
+              <p className="text-xs text-text-readable">開発体験をもっと直感的にしたい方</p>
             </div>
           </div>
         </div>
@@ -382,7 +382,7 @@ export default function ClaudeCodeStudioPage() {
               <br />
               その場で動かす。
             </h2>
-            <p className="mt-4 text-text-tertiary text-base md:text-lg max-w-lg mx-auto">
+            <p className="mt-4 text-text-readable text-base md:text-lg max-w-lg mx-auto">
               「/studio」を入力した瞬間から、新しい開発体験が始まります。
             </p>
             <div className="mt-8">

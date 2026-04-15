@@ -61,7 +61,7 @@ export default function Ecosystem() {
           <h2 className="text-3xl font-bold tracking-tight text-text-primary md:text-4xl">
             Skills はこれからどんどん増えます。
           </h2>
-          <p className="mt-4 text-text-tertiary text-base md:text-lg max-w-xl mx-auto">
+          <p className="mt-4 text-text-readable text-base md:text-lg max-w-xl mx-auto">
             リサーチ、SNS、コンテンツ制作、開発...
             <br />
             あらゆる作業を Skills で自動化できる世界を目指しています。
@@ -75,7 +75,7 @@ export default function Ecosystem() {
               key={skill.name}
               className="flex items-center gap-4 rounded-xl border border-surface-border/60 bg-surface-1/40 px-5 py-4 transition-all hover:border-surface-border hover:bg-surface-2/30"
             >
-              <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-surface-2 border border-surface-border text-text-tertiary">
+              <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-surface-2 border border-surface-border text-text-readable">
                 {skill.icon}
               </div>
               <div className="flex-1 min-w-0">
@@ -83,11 +83,11 @@ export default function Ecosystem() {
                   <h3 className="text-sm font-semibold text-text-primary truncate">
                     {skill.name}
                   </h3>
-                  <span className="flex-shrink-0 rounded-full bg-surface-3 px-2 py-0.5 text-[10px] font-medium text-text-tertiary">
+                  <span className="flex-shrink-0 rounded-full bg-surface-3 px-2 py-0.5 text-[10px] font-medium text-text-readable">
                     {skill.status}
                   </span>
                 </div>
-                <p className="text-xs text-text-tertiary mt-0.5">
+                <p className="text-xs text-text-readable mt-0.5">
                   {skill.description}
                 </p>
               </div>
@@ -107,7 +107,7 @@ export default function Ecosystem() {
               <br />
               ようになること。
             </p>
-            <p className="mt-3 text-sm text-text-tertiary">
+            <p className="mt-3 text-sm text-text-readable">
               Skills を追加するたびに、あなたの AI 能力が拡張されます。
             </p>
           </div>
