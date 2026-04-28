@@ -19,7 +19,7 @@ import {
 const packages = [
   {
     name: "01-mcp-auto-install",
-    desc: "Claudeがパソコンのファイルを操作する Filesystem MCP と、ブラウザを操作する Playwright MCP の2つの初期設定を、Claude自身が自動で済ませてくれる",
+    desc: "Claudeがパソコンのファイルを操作する Filesystem MCP と、ブラウザを操作する Playwright MCP の2つのセッティングを、Claude自身が最後までサポートしてくれる",
     icon: <Wrench size={18} />,
     thumb: "/images/mcp-auto-install-thumb.png",
   },
@@ -43,7 +43,7 @@ const demoSteps = [
     icon: <Wrench size={22} />,
     title: "Claudeに「できること」を増やす",
     command: "mcp-auto-install",
-    description: "起動プロンプトをClaude Desktopに貼るだけ。Filesystem MCP（ファイル操作）と Playwright MCP（ブラウザ操作）の設定ファイル編集を、Claudeが代わりに全部やってくれます。",
+    description: "起動プロンプトをClaude Desktopに貼るだけ。Filesystem MCP（ファイル操作）と Playwright MCP（ブラウザ操作）の設定ファイル編集を、Claude自身が最後までサポートしてくれます。",
     output: "Filesystem MCP + Playwright MCP が有効化され、Claudeが操作可能に",
     color: "text-cyan-400",
     border: "border-cyan-500/20",
@@ -103,9 +103,9 @@ const demoSteps = [
 const highlights = [
   {
     icon: <Wrench size={24} />,
-    title: "セットアップ自動化",
+    title: "セットアップ伴走",
     subtitle: "面倒な初期設定をClaudeに任せる",
-    description: "従来はメモ帳で設定ファイルを手書きし、特殊な記号付きで設定を編集する必要がありました。本キットではその全工程を Claude 自身が実行してくれます。",
+    description: "従来はメモ帳で設定ファイルを手書きし、特殊な記号付きで設定を編集する必要がありました。本キットではその全工程を Claude 自身が最後までサポートしてくれます。",
     color: "text-cyan-400",
     bgColor: "bg-cyan-600/20 border-cyan-500/30",
   },
@@ -142,7 +142,7 @@ const differences = [
   {
     label: "Claude AutoDeploy Suite",
     items: [
-      "環境構築は Claude が自動で完了",
+      "環境構築は Claude が最後までサポート",
       "質問に答えるだけ／ゲーム選ぶだけで生成",
       "Claudeがブラウザを操作して自動でWeb公開",
       "Claude Desktop 無料プランで動作",
