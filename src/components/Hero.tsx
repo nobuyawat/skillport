@@ -27,7 +27,7 @@ export default function Hero() {
 
         {/* Sub Copy */}
         <p className="mt-7 text-lg font-medium tracking-wide text-text-secondary/90 md:text-xl opacity-0 animate-fade-in-up animate-delay-200">
-          Claude Code を拡張する{" "}
+          Claude を拡張する{" "}
           <span className="text-brand-400">AI スキル</span>のストア
         </p>
 

@@ -51,7 +51,7 @@ export default function Footer() {
         <div className="mt-8 border-t border-surface-border/40 pt-6 text-center">
           <p className="text-[11px] text-text-tertiary/50">
             &copy; {new Date().getFullYear()} SkillPort. Built for the Claude
-            Code community.
+            community.
           </p>
         </div>
       </div>

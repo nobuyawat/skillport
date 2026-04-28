@@ -1,6 +1,5 @@
 import {
   Monitor,
-  FileText,
   BookOpen,
   Code2,
   Star,
@@ -8,10 +7,26 @@ import {
   ArrowRight,
   ExternalLink,
   Clock,
-  Presentation,
+  Rocket,
 } from "lucide-react";
 
 type SkillStatus = "free" | "paid" | "coming-soon";
+type SkillEnv = "code" | "desktop" | "both";
+
+const ENV_LABELS: Record<SkillEnv, { label: string; className: string }> = {
+  code: {
+    label: "Claude Code",
+    className: "text-violet-300 bg-violet-500/10 border-violet-400/20",
+  },
+  desktop: {
+    label: "Claude Desktop",
+    className: "text-orange-300 bg-orange-500/10 border-orange-400/20",
+  },
+  both: {
+    label: "Code / Desktop",
+    className: "text-text-readable bg-surface-2/60 border-surface-border",
+  },
+};
 
 interface SkillCard {
   name: string;
@@ -28,6 +43,7 @@ interface SkillCard {
   priceBadge: string;
   href?: string;
   available: boolean;
+  env: SkillEnv;
 }
 
 const skills: SkillCard[] = [
@@ -47,6 +63,7 @@ const skills: SkillCard[] = [
     priceBadge: "無料公開中",
     href: "/setup/workspace-bootstrap",
     available: true,
+    env: "code",
   },
   {
     name: "Claude Code Studio",
@@ -64,6 +81,25 @@ const skills: SkillCard[] = [
     priceBadge: "$0+",
     href: "/skills/claude-code-studio",
     available: true,
+    env: "code",
+  },
+  {
+    name: "Claude AutoDeploy Suite",
+    description:
+      "Claude Desktop 無料プランだけで、LPやゲームを話しかけて作り、ClaudeがそのままWebに公開してくれる3パッケージ統合キット。公開後の改造も話しかけるだけ。",
+    category: "自動デプロイ",
+    categoryColor: "text-sky-400 bg-sky-400/10 border-sky-400/20",
+    icon: <Rocket size={20} />,
+    thumbnail: "/images/claude-autodeploy-suite-thumb.png",
+    rating: 0,
+    downloads: "",
+    version: "v1.0.0",
+    badge: "NEW",
+    status: "paid",
+    priceBadge: "有料",
+    href: "/skills/claude-autodeploy-suite",
+    available: true,
+    env: "desktop",
   },
   {
     name: "Kindle Publishing Suite",
@@ -81,49 +117,7 @@ const skills: SkillCard[] = [
     priceBadge: "有料",
     href: "/skills/kindle-publishing-suite",
     available: true,
-  },
-  {
-    name: "Slide Animation Director",
-    description:
-      "AIでスライドを「作る」から「編集する」へ。台本からスライド生成＋自由配置編集＋PPTX出力まで一気通貫。",
-    category: "コンテンツ",
-    categoryColor: "text-rose-400 bg-rose-400/10 border-rose-400/20",
-    icon: <Presentation size={20} />,
-    thumbnail: "/images/slide-animation-director-thumb.png",
-    rating: 0,
-    downloads: "",
-    version: "v1.0.0",
-    status: "coming-soon" as SkillStatus,
-    priceBadge: "準備中",
-    available: false,
-  },
-  {
-    name: "Seed Generator",
-    description:
-      "Udemy 講座の台本を AI で自動生成。講座の構成や話し方のトーンまで、対話で設定できる。",
-    category: "コンテンツ",
-    categoryColor: "text-violet-400 bg-violet-400/10 border-violet-400/20",
-    icon: <FileText size={20} />,
-    rating: 0,
-    downloads: "",
-    version: "v2.0.0",
-    status: "coming-soon",
-    priceBadge: "準備中",
-    available: false,
-  },
-  {
-    name: "AI Docs Assistant",
-    description:
-      "プロジェクトのドキュメントを AI が自動で生成・更新。コードを読んで、わかりやすい説明を書いてくれる。",
-    category: "生産性",
-    categoryColor: "text-emerald-400 bg-emerald-400/10 border-emerald-400/20",
-    icon: <BookOpen size={20} />,
-    rating: 0,
-    downloads: "",
-    version: "v1.5.0",
-    status: "coming-soon",
-    priceBadge: "準備中",
-    available: false,
+    env: "code",
   },
 ];
 
@@ -151,7 +145,7 @@ export default function SkillCards() {
           あなたの作業を変える Skills
         </h2>
         <p className="mt-3 text-text-readable text-base md:text-lg">
-          無料から有料まで。すべて Claude Code で動きます
+          無料から有料まで。Claude Code / Claude Desktop で動きます
         </p>
       </div>
 
@@ -224,6 +218,15 @@ export default function SkillCards() {
                 {skill.name}
               </h3>
 
+              {/* Environment badge */}
+              <div className="mt-2">
+                <span
+                  className={`inline-flex items-center rounded-md border px-2 py-0.5 text-[10px] font-medium tracking-wide ${ENV_LABELS[skill.env].className}`}
+                >
+                  {ENV_LABELS[skill.env].label}
+                </span>
+              </div>
+
               {/* Description */}
               <p className="mt-2 flex-1 text-sm leading-relaxed text-text-readable">
                 {skill.description}
@@ -282,7 +285,7 @@ export default function SkillCards() {
         />
         <p className="text-sm text-text-tertiary/80 leading-relaxed max-w-lg">
           現在は GitHub から無料で取得して使えます。
-          ダウンロード後、Claude Code でセットアップを開始できます。
+          ダウンロード後、Claude Code または Claude Desktop でセットアップを開始できます。
         </p>
       </div>
     </section>
