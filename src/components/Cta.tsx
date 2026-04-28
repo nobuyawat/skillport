@@ -22,7 +22,7 @@ export default function Cta() {
               AI で変えてみませんか。
             </h2>
             <p className="mt-4 text-text-readable text-base md:text-lg max-w-lg mx-auto">
-              無料の Skill から始められます。Claude Code があれば、すぐに使えます。
+              無料の Skill から始められます。Claude Code または Claude Desktop があれば、すぐに使えます。
             </p>
 
             <div className="mt-8 flex justify-center">

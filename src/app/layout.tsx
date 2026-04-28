@@ -15,9 +15,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "SkillPort — 非エンジニアがAIで最強になる場所",
   description:
-    "Claude Code の Skills をダウンロードして質問に答えるだけ。非エンジニアでも AI ワークスペースを簡単に構築できます。",
+    "Claude Code / Claude Desktop で動く Skills のストア。話しかけるだけで Web 公開や自動化まで完結。非エンジニアでも AI ワークスペースを簡単に構築できます。",
   keywords: [
+    "Claude",
     "Claude Code",
+    "Claude Desktop",
     "Skills",
     "AI",
     "ワークスペース",
