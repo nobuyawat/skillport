@@ -113,7 +113,7 @@ const highlights = [
     icon: <MessageSquare size={24} />,
     title: "自然言語デプロイ",
     subtitle: "対話だけで公開まで",
-    description: "コードを書かない・コマンドを覚えない。Claude Desktop に話しかけるだけで完成品が生成され、ClaudeがそのままWebに公開してくれます。あなたが操作するのはチャットだけです。",
+    description: "コードを書かない・コマンドを覚えない。Claude Desktop に話しかけて完成品を作り、Webへの公開もClaudeが最後までサポートしてくれます。あなたはチャットと簡単な確認操作だけで進められます。",
     color: "text-violet-400",
     bgColor: "bg-violet-600/20 border-violet-500/30",
   },
@@ -189,9 +189,9 @@ export default function ClaudeAutoDeploySuitePage() {
             </h1>
             <p className="mt-6 text-text-readable/90 text-base md:text-lg leading-relaxed max-w-xl">
               初期設定 → LP制作 → ゲーム制作と公開の全工程を、Claude Desktop に
-              話しかけるだけで完結させる3パッケージ統合キット。
-              ClaudeがそのままWebに公開してくれて、公開後の改造も
-              「色を変えて」と話しかけるだけで反映されます。
+              話しかけながら進められる3パッケージ統合キット。
+              Claudeが最後までサポートしてWebに公開してくれて、
+              公開後の改造も「色を変えて」と話しかけるだけで反映されます。
             </p>
             <div className="mt-8">
               <a
@@ -285,7 +285,7 @@ export default function ClaudeAutoDeploySuitePage() {
         <div className="mx-auto max-w-5xl px-6 py-20">
           <div className="text-center mb-14">
             <p className="text-sm font-medium text-amber-400 mb-3">Key Features</p>
-            <h2 className="text-2xl font-bold md:text-3xl">なぜ自然言語だけで完結するのか</h2>
+            <h2 className="text-2xl font-bold md:text-3xl">なぜ自然言語だけで進められるのか</h2>
             <p className="mt-3 text-text-secondary">この3つの仕組みが、コードを書かない開発を支えています</p>
           </div>
 
