@@ -49,6 +49,24 @@ export default function Footer() {
 
         {/* Divider + Copyright */}
         <div className="mt-8 border-t border-surface-border/40 pt-6 text-center">
+          <div className="mb-3 flex flex-wrap items-center justify-center gap-x-5 gap-y-2">
+            <a
+              href="https://delightful-unicorn-0dd878.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs text-text-tertiary hover:text-text-secondary transition-colors"
+            >
+              特定商取引法に基づく表記
+            </a>
+            <a
+              href="https://euphonious-brioche-c80573.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs text-text-tertiary hover:text-text-secondary transition-colors"
+            >
+              プライバシーポリシー
+            </a>
+          </div>
           <p className="text-[11px] text-text-tertiary/50">
             &copy; {new Date().getFullYear()} SkillPort. Built for the Claude
             community.
