@@ -190,7 +190,7 @@ export default function KindlePublishingSuitePage() {
             </p>
             <div className="mt-8">
               <a
-                href="https://kmnworks.gumroad.com/l/trwpwt"
+                href="https://buy.stripe.com/14AdR1azL2925xN5G57AI00"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex items-center justify-center gap-2 rounded-xl bg-brand-600 px-8 py-4 text-base font-semibold text-white shadow-lg shadow-brand-600/20 transition-all hover:bg-brand-500 hover:shadow-xl hover:scale-[1.02] active:scale-[0.98]"
@@ -465,7 +465,7 @@ export default function KindlePublishingSuitePage() {
             </p>
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
-                href="https://kmnworks.gumroad.com/l/trwpwt"
+                href="https://buy.stripe.com/14AdR1azL2925xN5G57AI00"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex items-center gap-2 rounded-xl bg-brand-600 px-10 py-4 text-base font-semibold text-white shadow-lg shadow-brand-600/20 transition-all hover:bg-brand-500 hover:shadow-xl hover:scale-[1.02] active:scale-[0.98]"
@@ -482,7 +482,7 @@ export default function KindlePublishingSuitePage() {
               </a>
             </div>
             <p className="mt-4 text-xs text-text-tertiary/60">
-              Gumroad で安全に決済できます
+              Stripe で安全に決済できます（Apple Pay 対応）
             </p>
           </div>
         </div>

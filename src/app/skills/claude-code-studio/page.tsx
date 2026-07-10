@@ -1,6 +1,5 @@
 import {
   ArrowLeft,
-  ArrowRight,
   CheckCircle2,
   Zap,
   Monitor,
@@ -156,15 +155,11 @@ export default function ClaudeCodeStudioPage() {
               API不要。Claude Code があれば、すぐに使えます。
             </p>
             <div className="mt-8">
-              <a
-                href="https://kmnworks.gumroad.com/l/kymdrs"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group inline-flex items-center justify-center gap-2 rounded-xl bg-brand-600 px-8 py-4 text-base font-semibold text-white shadow-lg shadow-brand-600/20 transition-all hover:bg-brand-500 hover:shadow-xl hover:scale-[1.02] active:scale-[0.98]"
+              <span
+                className="inline-flex items-center justify-center gap-2 rounded-xl border border-surface-border bg-surface-2/60 px-8 py-4 text-base font-semibold text-text-tertiary cursor-not-allowed select-none"
               >
-                Gumroadで取得する
-                <ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" />
-              </a>
+                準備中（販売を一時停止しています）
+              </span>
               <p className="mt-3 text-xs text-text-tertiary/60">
                 取得後、Claude Code にプロンプトを貼るだけで導入完了
               </p>
@@ -293,7 +288,7 @@ export default function ClaudeCodeStudioPage() {
             <p className="text-sm font-medium text-brand-400 mb-3">Setup</p>
             <h2 className="text-2xl font-bold md:text-3xl">導入は3ステップ</h2>
             <p className="mt-3 text-text-readable max-w-lg mx-auto">
-              Gumroadで取得後、Claude Codeにプロンプトを貼るだけ。手動ダウンロードは不要です。
+              取得後、Claude Codeにプロンプトを貼るだけ。手動ダウンロードは不要です。
             </p>
           </div>
 
@@ -303,9 +298,9 @@ export default function ClaudeCodeStudioPage() {
                 <ShoppingCart size={22} />
               </div>
               <div className="text-xs font-mono text-text-tertiary/40 mb-2">STEP 1</div>
-              <h3 className="text-sm font-semibold mb-2">Gumroadで取得</h3>
+              <h3 className="text-sm font-semibold mb-2">購入して取得</h3>
               <p className="text-xs text-text-readable leading-relaxed">
-                「I want this!」を押すだけ。$0〜 の自由価格です。
+                購入ボタンを押すだけで取得できます。
               </p>
             </div>
 
@@ -386,15 +381,11 @@ export default function ClaudeCodeStudioPage() {
               「/studio」を入力した瞬間から、新しい開発体験が始まります。
             </p>
             <div className="mt-8">
-              <a
-                href="https://kmnworks.gumroad.com/l/kymdrs"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group inline-flex items-center gap-2 rounded-xl bg-brand-600 px-10 py-4 text-base font-semibold text-white shadow-lg shadow-brand-600/20 transition-all hover:bg-brand-500 hover:shadow-xl hover:scale-[1.02] active:scale-[0.98]"
+              <span
+                className="inline-flex items-center gap-2 rounded-xl border border-surface-border bg-surface-2/60 px-10 py-4 text-base font-semibold text-text-tertiary cursor-not-allowed select-none"
               >
-                Gumroadで取得する
-                <ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" />
-              </a>
+                準備中（販売を一時停止しています）
+              </span>
             </div>
             <p className="mt-4 text-xs text-text-tertiary/60">
               $0+ — 取得後、Claude Code にプロンプトを貼るだけで導入完了

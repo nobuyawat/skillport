@@ -1,6 +1,5 @@
 import {
   ArrowLeft,
-  ArrowRight,
   CheckCircle2,
   Zap,
   Sparkles,
@@ -194,15 +193,11 @@ export default function ClaudeAutoDeploySuitePage() {
               公開後の改造も「色を変えて」と話しかけるだけで反映されます。
             </p>
             <div className="mt-8">
-              <a
-                href="https://kmnworks.gumroad.com/l/caoozr"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group inline-flex items-center justify-center gap-2 rounded-xl bg-brand-600 px-8 py-4 text-base font-semibold text-white shadow-lg shadow-brand-600/20 transition-all hover:bg-brand-500 hover:shadow-xl hover:scale-[1.02] active:scale-[0.98]"
+              <span
+                className="inline-flex items-center justify-center gap-2 rounded-xl border border-surface-border bg-surface-2/60 px-8 py-4 text-base font-semibold text-text-tertiary cursor-not-allowed select-none"
               >
-                ¥1,980 で手に入れる
-                <ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" />
-              </a>
+                準備中（販売を一時停止しています）
+              </span>
             </div>
           </div>
           <div className="flex-shrink-0">
@@ -422,17 +417,13 @@ export default function ClaudeAutoDeploySuitePage() {
               話しかけるだけで、Webに作品が出ます。
             </p>
             <div className="mt-8 flex justify-center">
-              <a
-                href="https://kmnworks.gumroad.com/l/caoozr"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group inline-flex items-center gap-2 rounded-xl bg-brand-600 px-10 py-4 text-base font-semibold text-white shadow-lg shadow-brand-600/20 transition-all hover:bg-brand-500 hover:shadow-xl hover:scale-[1.02] active:scale-[0.98]"
+              <span
+                className="inline-flex items-center gap-2 rounded-xl border border-surface-border bg-surface-2/60 px-10 py-4 text-base font-semibold text-text-tertiary cursor-not-allowed select-none"
               >
-                ¥1,980 で手に入れる
-                <ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" />
-              </a>
+                準備中（販売を一時停止しています）
+              </span>
             </div>
-            <p className="mt-4 text-xs text-text-tertiary/60">Gumroad で安全に決済できます</p>
+            <p className="mt-4 text-xs text-text-tertiary/60">決済方法の切り替え作業中です</p>
           </div>
         </div>
       </section>

@@ -48,8 +48,8 @@ const steps = [
     icon: <CreditCard size={24} />,
     title: "有料 Skill を購入する",
     description:
-      "有料の Skill は Gumroad で購入できます。購入後、ダウンロードしたファイルを Claude Code の所定フォルダに配置します。",
-    note: "Gumroad ではクレジットカードで安全に決済できます。",
+      "有料の Skill は各 Skill ページの購入ボタンから決済できます。決済が完了すると、その場でダウンロードリンクが表示されるので、ファイルを Claude Code の所定フォルダに配置します。",
+    note: "Stripe で安全に決済できます（クレジットカード・Apple Pay 対応）。",
   },
   {
     number: "06",
