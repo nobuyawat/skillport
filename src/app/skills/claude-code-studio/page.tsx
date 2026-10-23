@@ -158,10 +158,10 @@ export default function ClaudeCodeStudioPage() {
               <span
                 className="inline-flex items-center justify-center gap-2 rounded-xl border border-surface-border bg-surface-2/60 px-8 py-4 text-base font-semibold text-text-tertiary cursor-not-allowed select-none"
               >
-                準備中（販売を一時停止しています）
+                販売を終了しました
               </span>
               <p className="mt-3 text-xs text-text-tertiary/60">
-                取得後、Claude Code にプロンプトを貼るだけで導入完了
+                Claude Code Studio は販売を終了しました。ご購入済みの方は、お手元のファイルでそのままお使いいただけます。
               </p>
             </div>
           </div>
@@ -384,11 +384,11 @@ export default function ClaudeCodeStudioPage() {
               <span
                 className="inline-flex items-center gap-2 rounded-xl border border-surface-border bg-surface-2/60 px-10 py-4 text-base font-semibold text-text-tertiary cursor-not-allowed select-none"
               >
-                準備中（販売を一時停止しています）
+                販売を終了しました
               </span>
             </div>
             <p className="mt-4 text-xs text-text-tertiary/60">
-              $0+ — 取得後、Claude Code にプロンプトを貼るだけで導入完了
+              販売を終了しました。ほかのスキルは <a href="/#skills" className="text-brand-400 underline">スキル一覧</a> からご覧ください。
             </p>
           </div>
         </div>
@@ -399,7 +399,7 @@ export default function ClaudeCodeStudioPage() {
         <div className="mx-auto max-w-5xl px-6 text-center">
           <div className="mb-4 flex flex-wrap items-center justify-center gap-x-5 gap-y-2">
             <a
-              href="https://delightful-unicorn-0dd878.netlify.app/"
+              href="https://kmnworks.com/tokushoho/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-xs text-text-tertiary hover:text-text-secondary transition-colors"
@@ -407,7 +407,7 @@ export default function ClaudeCodeStudioPage() {
               特定商取引法に基づく表記
             </a>
             <a
-              href="https://euphonious-brioche-c80573.netlify.app/"
+              href="https://kmnworks.com/privacy/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-xs text-text-tertiary hover:text-text-secondary transition-colors"

@@ -10,7 +10,7 @@ import {
   Rocket,
 } from "lucide-react";
 
-type SkillStatus = "free" | "paid" | "coming-soon";
+type SkillStatus = "free" | "paid" | "coming-soon" | "discontinued";
 type SkillEnv = "code" | "desktop" | "both";
 
 const ENV_LABELS: Record<SkillEnv, { label: string; className: string }> = {
@@ -66,24 +66,6 @@ const skills: SkillCard[] = [
     env: "code",
   },
   {
-    name: "Claude Code Studio",
-    description:
-      "チャットでUIを作り、目の前で動かす。API不要のAI開発環境。空のReady画面からチャット指示でUIが生えていく。",
-    category: "開発環境",
-    categoryColor: "text-green-400 bg-green-400/10 border-green-400/20",
-    icon: <Code2 size={20} />,
-    thumbnail: "/images/claude-code-studio-thumb.png",
-    rating: 0,
-    downloads: "",
-    version: "v1.0.0",
-    badge: "NEW",
-    status: "paid",
-    priceBadge: "$0+",
-    href: "/skills/claude-code-studio",
-    available: true,
-    env: "code",
-  },
-  {
     name: "Claude AutoDeploy Suite",
     description:
       "Claude Desktop 無料プランだけで、LPやゲームを話しかけて作り、ClaudeがそのままWebに公開してくれる3パッケージ統合キット。公開後の改造も話しかけるだけ。",
@@ -94,7 +76,6 @@ const skills: SkillCard[] = [
     rating: 0,
     downloads: "",
     version: "v1.0.0",
-    badge: "NEW",
     status: "paid",
     priceBadge: "有料",
     href: "/skills/claude-autodeploy-suite",
@@ -117,6 +98,24 @@ const skills: SkillCard[] = [
     priceBadge: "有料",
     href: "/skills/kindle-publishing-suite",
     available: true,
+    env: "code",
+  },
+  {
+    name: "Claude Code Studio",
+    description:
+      "チャットでUIを作り、目の前で動かす。API不要のAI開発環境。空のReady画面からチャット指示でUIが生えていく。",
+    category: "開発環境",
+    categoryColor: "text-green-400 bg-green-400/10 border-green-400/20",
+    icon: <Code2 size={20} />,
+    thumbnail: "/images/claude-code-studio-thumb.png",
+    rating: 0,
+    downloads: "",
+    version: "v1.0.0",
+    badge: "販売終了",
+    status: "discontinued",
+    priceBadge: "販売終了",
+    href: "/skills/claude-code-studio",
+    available: false,
     env: "code",
   },
 ];
@@ -266,8 +265,14 @@ export default function SkillCards() {
                       </span>
                     </div>
                     <span className="flex items-center gap-1.5 text-xs font-medium text-text-tertiary/50">
-                      <Clock size={12} />
-                      近日公開
+                      {skill.status === "discontinued" ? (
+                        "販売を終了しました"
+                      ) : (
+                        <>
+                          <Clock size={12} />
+                          近日公開
+                        </>
+                      )}
                     </span>
                   </div>
                 </div>

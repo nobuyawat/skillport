@@ -222,7 +222,7 @@ export default function StartPage() {
         <div className="mx-auto max-w-4xl px-6 text-center">
           <div className="mb-4 flex flex-wrap items-center justify-center gap-x-5 gap-y-2">
             <a
-              href="https://delightful-unicorn-0dd878.netlify.app/"
+              href="https://kmnworks.com/tokushoho/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-xs text-text-tertiary hover:text-text-secondary transition-colors"
@@ -230,7 +230,7 @@ export default function StartPage() {
               特定商取引法に基づく表記
             </a>
             <a
-              href="https://euphonious-brioche-c80573.netlify.app/"
+              href="https://kmnworks.com/privacy/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-xs text-text-tertiary hover:text-text-secondary transition-colors"

@@ -29,12 +29,7 @@ export default function Footer() {
             >
               使い方
             </a>
-            <a
-              href="#ecosystem"
-              className="text-xs text-text-tertiary hover:text-text-secondary transition-colors"
-            >
-              今後の展開
-            </a>
+            {/* 今後の展開（#ecosystem）は 2026-10-05 いったん非公開 */}
             <a
               href="https://github.com/nobuyawat/workspace-bootstrap"
               target="_blank"
@@ -51,7 +46,7 @@ export default function Footer() {
         <div className="mt-8 border-t border-surface-border/40 pt-6 text-center">
           <div className="mb-3 flex flex-wrap items-center justify-center gap-x-5 gap-y-2">
             <a
-              href="https://delightful-unicorn-0dd878.netlify.app/"
+              href="https://kmnworks.com/tokushoho/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-xs text-text-tertiary hover:text-text-secondary transition-colors"
@@ -59,7 +54,7 @@ export default function Footer() {
               特定商取引法に基づく表記
             </a>
             <a
-              href="https://euphonious-brioche-c80573.netlify.app/"
+              href="https://kmnworks.com/privacy/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-xs text-text-tertiary hover:text-text-secondary transition-colors"
