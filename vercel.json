@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "destination": "https://skillport.kmnworks.com/:path*",
+      "permanent": true
+    }
+  ]
+}
